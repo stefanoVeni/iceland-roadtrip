@@ -1,0 +1,1725 @@
+{
+  "viaggio": {
+    "titolo": "Islanda",
+    "versione": 14,
+    "fuso_orario": "UTC+0 (ora islandese, nessun cambio ora). In Italia a novembre +1 ora.",
+    "nota_distanze": "I km in auto sono stime a spanne, non ricavate da Google Maps: verificarli prima di partire. Una sola tratta è confermata da una fonte: Jökulsárlón → Skaftafell, 57 km (circa 50 minuti). I tempi sono quelli del piano; durata_50kmh_minuti è il tempo a 50 km/h di media, per stare larghi.",
+    "alloggi": [
+      {
+        "nome": "Skyggnir Bed and Breakfast",
+        "notti": [
+          "2026-11-09"
+        ],
+        "cucina": true,
+        "check_in": "17:00–22:00",
+        "check_out": "entro 10:30",
+        "colazione": "inclusa",
+        "parcheggio": "incluso",
+        "maps_url": "https://www.google.com/maps/search/?api=1&query=Skyggnir+Bed+and+Breakfast%2C+Islanda"
+      },
+      {
+        "nome": "Guesthouse Carina",
+        "notti": [
+          "2026-11-10",
+          "2026-11-11"
+        ],
+        "cucina": false,
+        "check_in": "24 ore",
+        "check_out": "entro 10:30",
+        "colazione": "non inclusa",
+        "parcheggio": "incluso",
+        "maps_url": "https://www.google.com/maps/search/?api=1&query=Guesthouse+Carina%2C+Islanda"
+      },
+      {
+        "nome": "Fosshotel Núpar",
+        "notti": [
+          "2026-11-12",
+          "2026-11-13"
+        ],
+        "cucina": false,
+        "check_in": "15:00–23:30",
+        "check_out": "7:00–12:00",
+        "colazione": "non inclusa",
+        "parcheggio": "incluso",
+        "maps_url": "https://www.google.com/maps/search/?api=1&query=Fosshotel+N%C3%BApar%2C+Islanda"
+      },
+      {
+        "nome": "Guesthouse Aurora",
+        "notti": [
+          "2026-11-14"
+        ],
+        "cucina": false,
+        "check_in": "14:00–22:00",
+        "check_out": "entro 11:00",
+        "colazione": "inclusa",
+        "parcheggio": "incluso",
+        "maps_url": "https://www.google.com/maps/search/?api=1&query=Guesthouse+Aurora%2C+Islanda"
+      },
+      {
+        "nome": "Kopa Hotel, Keflavík",
+        "notti": [
+          "2026-11-15"
+        ],
+        "cucina": false,
+        "check_in": "16:00–24:00 (da verificare: indicato come 16, la notte è del 15)",
+        "check_out": "entro 10:00",
+        "colazione": "non inclusa",
+        "parcheggio": "incluso",
+        "maps_url": "https://www.google.com/maps/search/?api=1&query=Kopa+Hotel%2C+Keflav%C3%ADk%2C+Islanda"
+      }
+    ],
+    "giorni": [
+      {
+        "numero": 1,
+        "data": "2026-11-09",
+        "giorno_settimana": "lunedì",
+        "luce": {
+          "alba": "09:29",
+          "tramonto": "16:44",
+          "riferimento": "Laugarvatn (notte Skyggnir B&B)",
+          "nota": "calcolo astronomico, precisione circa ±2 minuti"
+        },
+        "tappe": [
+          {
+            "ordine": 1,
+            "nome": "Keflavík International Airport",
+            "tipo": "aeroporto",
+            "arrivo": "09:30",
+            "partenza": "11:00",
+            "camminata_km_ar": 0,
+            "luce": "alba",
+            "note": "Ritiro bagagli e auto a noleggio",
+            "spostamento_successivo": {
+              "mezzo": "auto",
+              "durata_minuti": 100,
+              "distanza_km_stimata": 90,
+              "durata_50kmh_minuti": 108
+            },
+            "maps_url": "https://www.google.com/maps/search/?api=1&query=Keflav%C3%ADk+International+Airport%2C+Islanda",
+            "coordinate": {
+              "lat": 63.985,
+              "lng": -22.6056
+            }
+          },
+          {
+            "ordine": 2,
+            "nome": "Parco nazionale Þingvellir",
+            "tipo": "parco nazionale",
+            "arrivo": "13:00",
+            "partenza": "13:30",
+            "camminata_km_ar": 3,
+            "luce": "giorno",
+            "note": "",
+            "spostamento_successivo": {
+              "mezzo": "auto",
+              "durata_minuti": 60,
+              "distanza_km_stimata": 60,
+              "durata_50kmh_minuti": 72
+            },
+            "maps_url": "https://www.google.com/maps/search/?api=1&query=Parco+nazionale+%C3%9Eingvellir%2C+Islanda",
+            "coordinate": {
+              "lat": 64.2559,
+              "lng": -21.1297
+            }
+          },
+          {
+            "ordine": 3,
+            "nome": "Strokkur Geyser",
+            "tipo": "geyser",
+            "arrivo": "14:30",
+            "partenza": "15:00",
+            "camminata_km_ar": 3,
+            "luce": "giorno",
+            "note": "",
+            "spostamento_successivo": {
+              "mezzo": "auto",
+              "durata_minuti": 10,
+              "distanza_km_stimata": 10,
+              "durata_50kmh_minuti": 12
+            },
+            "maps_url": "https://www.google.com/maps/search/?api=1&query=Strokkur+Geyser%2C+Islanda",
+            "coordinate": {
+              "lat": 64.312,
+              "lng": -20.301
+            }
+          },
+          {
+            "ordine": 4,
+            "nome": "Gullfoss",
+            "tipo": "cascata",
+            "arrivo": "15:20",
+            "partenza": "16:00",
+            "camminata_km_ar": 2,
+            "luce": "giorno",
+            "note": "Alla partenza restano circa 45 minuti di luce (tramonto 16:44)",
+            "spostamento_successivo": {
+              "mezzo": "auto",
+              "durata_minuti": 30,
+              "distanza_km_stimata": 35,
+              "durata_50kmh_minuti": 42
+            },
+            "maps_url": "https://www.google.com/maps/search/?api=1&query=Gullfoss%2C+Islanda",
+            "coordinate": {
+              "lat": 64.3271,
+              "lng": -20.1199
+            }
+          },
+          {
+            "ordine": 5,
+            "nome": "Skyggnir Bed and Breakfast",
+            "tipo": "alloggio",
+            "arrivo": "16:45",
+            "partenza": "17:15",
+            "camminata_km_ar": 0,
+            "luce": "tramonto",
+            "note": "Check-in dalle 17:00: attesa di circa 15 minuti",
+            "spostamento_successivo": {
+              "mezzo": "auto",
+              "durata_minuti": 10,
+              "distanza_km_stimata": 20,
+              "durata_50kmh_minuti": 24
+            },
+            "maps_url": "https://www.google.com/maps/search/?api=1&query=Skyggnir+Bed+and+Breakfast%2C+Islanda",
+            "coordinate": {
+              "lat": 64.199,
+              "lng": -20.62
+            }
+          },
+          {
+            "ordine": 6,
+            "nome": "Secret Lagoon",
+            "tipo": "terme geotermiche",
+            "arrivo": "17:45",
+            "partenza": "19:00",
+            "camminata_km_ar": 0,
+            "luce": "buio",
+            "note": "",
+            "spostamento_successivo": {
+              "mezzo": "auto",
+              "durata_minuti": 10,
+              "distanza_km_stimata": 20,
+              "durata_50kmh_minuti": 24
+            },
+            "maps_url": "https://www.google.com/maps/search/?api=1&query=Secret+Lagoon%2C+Islanda",
+            "coordinate": {
+              "lat": 64.1403,
+              "lng": -20.3023
+            }
+          },
+          {
+            "ordine": 7,
+            "nome": "Skyggnir Bed and Breakfast",
+            "tipo": "alloggio",
+            "arrivo": "19:10",
+            "arrivo_stimato": true,
+            "partenza": null,
+            "camminata_km_ar": 0,
+            "luce": "buio",
+            "note": "Pernottamento del 9 novembre",
+            "spostamento_successivo": null,
+            "maps_url": "https://www.google.com/maps/search/?api=1&query=Skyggnir+Bed+and+Breakfast%2C+Islanda",
+            "coordinate": {
+              "lat": 64.199,
+              "lng": -20.62
+            }
+          }
+        ],
+        "alloggio_notte": "Skyggnir Bed and Breakfast",
+        "totali": {
+          "tempo_in_auto_minuti": 220,
+          "distanza_auto_km_stimata": 235,
+          "camminata_km_ar": 8,
+          "tempo_in_auto_50kmh_minuti": 282
+        },
+        "google_maps_percorso_url": "https://www.google.com/maps/dir/?api=1&origin=Keflav%C3%ADk+International+Airport%2C+Islanda&destination=Skyggnir+Bed+and+Breakfast%2C+Islanda&travelmode=driving&waypoints=Parco+nazionale+%C3%9Eingvellir%2C+Islanda%7CStrokkur+Geyser%2C+Islanda%7CGullfoss%2C+Islanda%7CSkyggnir+Bed+and+Breakfast%2C+Islanda%7CSecret+Lagoon%2C+Islanda"
+      },
+      {
+        "numero": 2,
+        "data": "2026-11-10",
+        "giorno_settimana": "martedì",
+        "luce": {
+          "alba": "09:20",
+          "tramonto": "16:40",
+          "riferimento": "zona sud, Vík (notte Guesthouse Carina, posizione stimata)",
+          "nota": "calcolo astronomico, precisione circa ±2 minuti; la posizione esatta di Carina non è verificata"
+        },
+        "tappe": [
+          {
+            "ordine": 1,
+            "nome": "Partenza da Skyggnir Bed and Breakfast",
+            "tipo": "partenza",
+            "arrivo": null,
+            "partenza": "09:00",
+            "camminata_km_ar": 0,
+            "luce": "buio",
+            "note": "Ancora buio: l'alba è alle 09:20",
+            "spostamento_successivo": {
+              "mezzo": "auto",
+              "durata_minuti": 40,
+              "distanza_km_stimata": 45,
+              "durata_50kmh_minuti": 54
+            },
+            "maps_url": "https://www.google.com/maps/search/?api=1&query=Skyggnir+Bed+and+Breakfast%2C+Islanda",
+            "coordinate": {
+              "lat": 64.199,
+              "lng": -20.62
+            }
+          },
+          {
+            "ordine": 2,
+            "nome": "Kerið",
+            "tipo": "cratere vulcanico",
+            "arrivo": "10:00",
+            "partenza": "10:30",
+            "camminata_km_ar": 0.5,
+            "luce": "giorno",
+            "note": "",
+            "spostamento_successivo": {
+              "mezzo": "auto",
+              "durata_minuti": 90,
+              "distanza_km_stimata": 100,
+              "durata_50kmh_minuti": 120
+            },
+            "maps_url": "https://www.google.com/maps/search/?api=1&query=Keri%C3%B0%2C+Islanda",
+            "coordinate": {
+              "lat": 64.0644,
+              "lng": -20.905
+            }
+          },
+          {
+            "ordine": 3,
+            "nome": "Seljalandsfoss & Gljúfrabúi",
+            "tipo": "cascata",
+            "arrivo": "12:00",
+            "partenza": "13:30",
+            "camminata_km_ar": 2,
+            "luce": "giorno",
+            "note": "",
+            "spostamento_successivo": {
+              "mezzo": "auto",
+              "durata_minuti": 30,
+              "distanza_km_stimata": 25,
+              "durata_50kmh_minuti": 30
+            },
+            "maps_url": "https://www.google.com/maps/search/?api=1&query=Seljalandsfoss+%26+Glj%C3%BAfrab%C3%BAi%2C+Islanda",
+            "coordinate": {
+              "lat": 63.6156,
+              "lng": -19.9886
+            }
+          },
+          {
+            "ordine": 4,
+            "nome": "Skógafoss & Kvernufoss",
+            "tipo": "cascata",
+            "arrivo": "14:00",
+            "partenza": "16:30",
+            "camminata_km_ar": 5,
+            "luce": "giorno",
+            "note": "Tramonto alle 16:40: la visita si chiude con la luce che cala",
+            "spostamento_successivo": {
+              "mezzo": "auto",
+              "durata_minuti": 30,
+              "distanza_km_stimata": 30,
+              "durata_50kmh_minuti": 36
+            },
+            "maps_url": "https://www.google.com/maps/search/?api=1&query=Sk%C3%B3gafoss+%26+Kvernufoss%2C+Islanda",
+            "coordinate": {
+              "lat": 63.5321,
+              "lng": -19.5113
+            }
+          },
+          {
+            "ordine": 5,
+            "nome": "Sólheimajökull",
+            "tipo": "ghiacciaio",
+            "arrivo": "17:00",
+            "partenza": "18:00",
+            "camminata_km_ar": 2.5,
+            "luce": "buio",
+            "note": "Quasi tutta la visita al buio: servono frontale e attenzione",
+            "spostamento_successivo": {
+              "mezzo": "auto",
+              "durata_minuti": 15,
+              "distanza_km_stimata": 10,
+              "durata_50kmh_minuti": 12
+            },
+            "maps_url": "https://www.google.com/maps/search/?api=1&query=S%C3%B3lheimaj%C3%B6kull%2C+Islanda",
+            "coordinate": {
+              "lat": 63.535,
+              "lng": -19.36
+            }
+          },
+          {
+            "ordine": 6,
+            "nome": "Solheimasandur Plane Wreck",
+            "tipo": "relitto di aereo",
+            "arrivo": "18:15",
+            "partenza": "20:45",
+            "camminata_km_ar": 8,
+            "luce": "buio",
+            "note": "Circa 2 ore di cammino a/r più 30 minuti di visita. Tutta la visita al buio: servono frontali e un margine di tempo per il rientro.",
+            "spostamento_successivo": {
+              "mezzo": "auto",
+              "durata_minuti": 20,
+              "distanza_km_stimata": 20,
+              "durata_50kmh_minuti": 24
+            },
+            "maps_url": "https://www.google.com/maps/search/?api=1&query=Solheimasandur+Plane+Wreck%2C+Islanda",
+            "coordinate": {
+              "lat": 63.463,
+              "lng": -19.385
+            }
+          },
+          {
+            "ordine": 7,
+            "nome": "Guesthouse Carina",
+            "tipo": "alloggio",
+            "arrivo": "21:05",
+            "partenza": null,
+            "camminata_km_ar": 0,
+            "luce": "buio",
+            "note": "Pernottamento del 10 novembre",
+            "spostamento_successivo": null,
+            "maps_url": "https://www.google.com/maps/search/?api=1&query=Guesthouse+Carina%2C+Islanda",
+            "coordinate": {
+              "lat": 63.4186,
+              "lng": -19.0064
+            }
+          }
+        ],
+        "alloggio_notte": "Guesthouse Carina",
+        "totali": {
+          "tempo_in_auto_minuti": 225,
+          "distanza_auto_km_stimata": 230,
+          "camminata_km_ar": 18,
+          "tempo_in_auto_50kmh_minuti": 276
+        },
+        "google_maps_percorso_url": "https://www.google.com/maps/dir/?api=1&origin=Skyggnir+Bed+and+Breakfast%2C+Islanda&destination=Guesthouse+Carina%2C+Islanda&travelmode=driving&waypoints=Keri%C3%B0%2C+Islanda%7CSeljalandsfoss+%26+Glj%C3%BAfrab%C3%BAi%2C+Islanda%7CSk%C3%B3gafoss+%26+Kvernufoss%2C+Islanda%7CS%C3%B3lheimaj%C3%B6kull%2C+Islanda%7CSolheimasandur+Plane+Wreck%2C+Islanda"
+      },
+      {
+        "numero": 3,
+        "data": "2026-11-11",
+        "giorno_settimana": "mercoledì",
+        "luce": {
+          "alba": "09:24",
+          "tramonto": "16:37",
+          "riferimento": "zona Vík (Guesthouse Carina, posizione stimata)",
+          "nota": "calcolo astronomico, precisione circa ±2 minuti"
+        },
+        "tappe": [
+          {
+            "ordine": 1,
+            "nome": "Partenza da Guesthouse Carina",
+            "tipo": "partenza",
+            "arrivo": null,
+            "partenza": "09:00",
+            "camminata_km_ar": 0,
+            "luce": "buio",
+            "note": "Ancora buio: l'alba è alle 09:24",
+            "spostamento_successivo": {
+              "mezzo": "auto",
+              "durata_minuti": 20,
+              "distanza_km_stimata": 15,
+              "durata_50kmh_minuti": 18
+            },
+            "maps_url": "https://www.google.com/maps/search/?api=1&query=Guesthouse+Carina%2C+Islanda",
+            "coordinate": {
+              "lat": 63.4186,
+              "lng": -19.0064
+            }
+          },
+          {
+            "ordine": 2,
+            "nome": "Dyrhólaey",
+            "tipo": "promontorio e faro",
+            "arrivo": "09:20",
+            "partenza": "10:30",
+            "camminata_km_ar": 1,
+            "luce": "alba",
+            "note": "Alba alle 09:24, durante la visita",
+            "spostamento_successivo": {
+              "mezzo": "auto",
+              "durata_minuti": 20,
+              "distanza_km_stimata": 5,
+              "durata_50kmh_minuti": 6
+            },
+            "maps_url": "https://www.google.com/maps/search/?api=1&query=Dyrh%C3%B3laey%2C+Islanda",
+            "coordinate": {
+              "lat": 63.4029,
+              "lng": -19.1356
+            }
+          },
+          {
+            "ordine": 3,
+            "nome": "Reynisfjara Beach",
+            "tipo": "spiaggia nera",
+            "arrivo": "11:00",
+            "partenza": "12:00",
+            "camminata_km_ar": 1,
+            "luce": "giorno",
+            "note": "Onde anomale: non dare mai le spalle al mare e stai lontano dalla linea dell'acqua. Segui gli avvisi sul posto.",
+            "spostamento_successivo": {
+              "mezzo": "auto",
+              "durata_minuti": 40,
+              "distanza_km_stimata": 30,
+              "durata_50kmh_minuti": 36
+            },
+            "maps_url": "https://www.google.com/maps/search/?api=1&query=Reynisfjara+Beach%2C+Islanda",
+            "coordinate": {
+              "lat": 63.4057,
+              "lng": -19.0487
+            }
+          },
+          {
+            "ordine": 4,
+            "nome": "Katla Ice Cave",
+            "tipo": "grotta di ghiaccio",
+            "arrivo": "12:40",
+            "partenza": "14:00",
+            "camminata_km_ar": 4,
+            "luce": "giorno",
+            "note": "Di solito visitabile solo con guida: verificare che sia aperta a novembre e prenotare",
+            "spostamento_successivo": {
+              "mezzo": "auto",
+              "durata_minuti": 30,
+              "distanza_km_stimata": 25,
+              "durata_50kmh_minuti": 30
+            },
+            "maps_url": "https://www.google.com/maps/search/?api=1&query=Katla+Ice+Cave%2C+Islanda",
+            "coordinate": {
+              "lat": 63.485,
+              "lng": -19.105
+            }
+          },
+          {
+            "ordine": 5,
+            "nome": "Gígjagjá",
+            "tipo": "canyon",
+            "arrivo": "14:30",
+            "partenza": "15:00",
+            "camminata_km_ar": null,
+            "luce": "giorno",
+            "note": "Camminata non indicata",
+            "spostamento_successivo": {
+              "mezzo": "auto",
+              "durata_minuti": 20,
+              "distanza_km_stimata": 20,
+              "durata_50kmh_minuti": 24
+            },
+            "maps_url": "https://www.google.com/maps/search/?api=1&query=G%C3%ADgjagj%C3%A1%2C+Islanda",
+            "coordinate": {
+              "lat": 63.629,
+              "lng": -19.104
+            }
+          },
+          {
+            "ordine": 6,
+            "nome": "Guesthouse Carina",
+            "tipo": "alloggio",
+            "arrivo": "15:30",
+            "partenza": null,
+            "camminata_km_ar": 0,
+            "luce": "giorno",
+            "note": "Pernottamento dell'11 novembre. Arrivo con luce, tramonto alle 16:37",
+            "spostamento_successivo": null,
+            "maps_url": "https://www.google.com/maps/search/?api=1&query=Guesthouse+Carina%2C+Islanda",
+            "coordinate": {
+              "lat": 63.4186,
+              "lng": -19.0064
+            }
+          }
+        ],
+        "alloggio_notte": "Guesthouse Carina",
+        "totali": {
+          "tempo_in_auto_minuti": 130,
+          "distanza_auto_km_stimata": 95,
+          "camminata_km_ar_dichiarati": 6,
+          "tempo_in_auto_50kmh_minuti": 114
+        },
+        "google_maps_percorso_url": "https://www.google.com/maps/dir/?api=1&origin=Guesthouse+Carina%2C+Islanda&destination=Guesthouse+Carina%2C+Islanda&travelmode=driving&waypoints=Dyrh%C3%B3laey%2C+Islanda%7CReynisfjara+Beach%2C+Islanda%7CKatla+Ice+Cave%2C+Islanda%7CG%C3%ADgjagj%C3%A1%2C+Islanda"
+      },
+      {
+        "numero": 4,
+        "data": "2026-11-12",
+        "giorno_settimana": "giovedì",
+        "luce": {
+          "alba": "09:20",
+          "tramonto": "16:18",
+          "riferimento": "zona Jökulsárlón (posizione stimata). A Vík il tramonto è alle 16:34",
+          "nota": "calcolo astronomico, precisione circa ±2 minuti"
+        },
+        "tappe": [
+          {
+            "ordine": 1,
+            "nome": "Partenza da Guesthouse Carina",
+            "tipo": "partenza",
+            "arrivo": null,
+            "partenza": "09:00",
+            "camminata_km_ar": 0,
+            "luce": "buio",
+            "note": "Ancora buio all'orario di partenza",
+            "spostamento_successivo": {
+              "mezzo": "auto",
+              "durata_minuti": 150,
+              "distanza_km_stimata": 190,
+              "durata_50kmh_minuti": 228
+            },
+            "maps_url": "https://www.google.com/maps/search/?api=1&query=Guesthouse+Carina%2C+Islanda",
+            "coordinate": {
+              "lat": 63.4186,
+              "lng": -19.0064
+            }
+          },
+          {
+            "ordine": 2,
+            "nome": "Jökulsárlón Glacier Lagoon & Diamond Beach",
+            "tipo": "laguna glaciale e spiaggia",
+            "arrivo": "11:30",
+            "partenza": "13:30",
+            "camminata_km_ar": null,
+            "luce": "giorno",
+            "note": "Camminata non indicata",
+            "spostamento_successivo": {
+              "mezzo": "auto",
+              "durata_minuti": 75,
+              "distanza_km_stimata": 70,
+              "durata_50kmh_minuti": 84
+            },
+            "maps_url": "https://www.google.com/maps/search/?api=1&query=J%C3%B6kuls%C3%A1rl%C3%B3n+Glacier+Lagoon+%26+Diamond+Beach%2C+Islanda",
+            "coordinate": {
+              "lat": 64.0784,
+              "lng": -16.2307
+            }
+          },
+          {
+            "ordine": 3,
+            "nome": "Fosshotel Núpar",
+            "tipo": "alloggio",
+            "arrivo": "15:00",
+            "partenza": null,
+            "camminata_km_ar": 0,
+            "luce": "giorno",
+            "note": "Pernottamento del 12 novembre. Arrivo con luce, tramonto alle 16:18 nella zona di Jökulsárlón",
+            "spostamento_successivo": null,
+            "maps_url": "https://www.google.com/maps/search/?api=1&query=Fosshotel+N%C3%BApar%2C+Islanda",
+            "coordinate": {
+              "lat": 63.933,
+              "lng": -17.8
+            }
+          }
+        ],
+        "alloggio_notte": "Fosshotel Núpar",
+        "totali": {
+          "tempo_in_auto_minuti": 225,
+          "distanza_auto_km_stimata": 260,
+          "camminata_km_ar_dichiarati": null,
+          "tempo_in_auto_50kmh_minuti": 312
+        },
+        "google_maps_percorso_url": "https://www.google.com/maps/dir/?api=1&origin=Guesthouse+Carina%2C+Islanda&destination=Fosshotel+N%C3%BApar%2C+Islanda&travelmode=driving&waypoints=J%C3%B6kuls%C3%A1rl%C3%B3n+Glacier+Lagoon+%26+Diamond+Beach%2C+Islanda"
+      },
+      {
+        "numero": 5,
+        "data": "2026-11-13",
+        "giorno_settimana": "venerdì",
+        "luce": {
+          "alba": "09:26",
+          "tramonto": "16:19",
+          "riferimento": "zona Skaftafell (stima)",
+          "nota": "calcolo astronomico, precisione circa ±2 minuti"
+        },
+        "tappe": [
+          {
+            "ordine": 1,
+            "nome": "Partenza da Fosshótel Núpar",
+            "tipo": "partenza",
+            "arrivo": null,
+            "partenza": "09:00",
+            "camminata_km_ar": 0,
+            "luce": "buio",
+            "note": "Ancora buio: l'alba è alle 09:26",
+            "spostamento_successivo": {
+              "mezzo": "auto",
+              "durata_minuti": 40,
+              "distanza_km_stimata": 45,
+              "durata_50kmh_minuti": 54
+            },
+            "maps_url": "https://www.google.com/maps/search/?api=1&query=Fossh%C3%B3tel+N%C3%BApar%2C+Islanda",
+            "coordinate": {
+              "lat": 63.933,
+              "lng": -17.8
+            }
+          },
+          {
+            "ordine": 2,
+            "nome": "Skaftafell Blue Ice Cave & Svartifoss",
+            "tipo": "esplorazione guidata",
+            "arrivo": "09:40",
+            "tour_guidato": {
+              "inizio": "10:00",
+              "fine": "14:00"
+            },
+            "partenza": "15:30",
+            "camminata_km_ar": null,
+            "luce": "giorno",
+            "note": "Tempo libero tra le 14:00 e le 15:30. Il tour sul ghiaccio blu è guidato: prenotare e verificare che sia attivo a novembre.",
+            "spostamento_successivo": {
+              "mezzo": "auto",
+              "durata_minuti": 40,
+              "distanza_km_stimata": 45,
+              "durata_50kmh_minuti": 54
+            },
+            "maps_url": "https://www.google.com/maps/search/?api=1&query=Skaftafell+Blue+Ice+Cave+%26+Svartifoss%2C+Islanda",
+            "coordinate": {
+              "lat": 63.9896,
+              "lng": -16.9977
+            }
+          },
+          {
+            "ordine": 3,
+            "nome": "Fosshótel Núpar",
+            "tipo": "alloggio",
+            "arrivo": "16:15",
+            "partenza": null,
+            "camminata_km_ar": 0,
+            "luce": "tramonto",
+            "note": "Pernottamento del 13 novembre. Arrivo poco prima del tramonto (16:19): il rientro avviene al crepuscolo",
+            "spostamento_successivo": null,
+            "maps_url": "https://www.google.com/maps/search/?api=1&query=Fossh%C3%B3tel+N%C3%BApar%2C+Islanda",
+            "coordinate": {
+              "lat": 63.933,
+              "lng": -17.8
+            }
+          }
+        ],
+        "alloggio_notte": "Fosshotel Núpar",
+        "totali": {
+          "tempo_in_auto_minuti": 80,
+          "distanza_auto_km_stimata": 90,
+          "camminata_km_ar_dichiarati": null,
+          "tempo_in_auto_50kmh_minuti": 108
+        },
+        "google_maps_percorso_url": "https://www.google.com/maps/dir/?api=1&origin=Fossh%C3%B3tel+N%C3%BApar%2C+Islanda&destination=Fossh%C3%B3tel+N%C3%BApar%2C+Islanda&travelmode=driving&waypoints=Skaftafell+Blue+Ice+Cave+%26+Svartifoss%2C+Islanda"
+      },
+      {
+        "numero": 6,
+        "data": "2026-11-14",
+        "giorno_settimana": "sabato",
+        "luce": {
+          "alba": "09:51",
+          "tramonto": "16:34",
+          "riferimento": "zona Reykjavík (Guesthouse Aurora, posizione stimata)",
+          "nota": "calcolo astronomico, precisione circa ±2 minuti"
+        },
+        "tappe": [
+          {
+            "ordine": 1,
+            "nome": "Partenza da Fosshótel Núpar",
+            "tipo": "partenza",
+            "arrivo": null,
+            "partenza": "09:00",
+            "camminata_km_ar": 0,
+            "luce": "buio",
+            "note": "Ancora buio: alba alle 09:51",
+            "spostamento_successivo": {
+              "mezzo": "auto",
+              "durata_minuti": 225,
+              "distanza_km_stimata": 280,
+              "durata_50kmh_minuti": 336,
+              "km_fonte": "fornito dall'utente"
+            },
+            "maps_url": "https://www.google.com/maps/search/?api=1&query=Fossh%C3%B3tel+N%C3%BApar%2C+Islanda",
+            "coordinate": {
+              "lat": 63.933,
+              "lng": -17.8
+            }
+          },
+          {
+            "ordine": 2,
+            "nome": "Guesthouse Aurora, Reykjavík",
+            "tipo": "alloggio",
+            "arrivo": "12:45",
+            "partenza": null,
+            "camminata_km_ar": 0,
+            "luce": "giorno",
+            "note": "Pernottamento del 14 novembre. Check-in dalle 14:00: con l'arrivo alle 12:45 c'è da attendere circa 1h15. A 50 km/h l'arrivo sarebbe alle 14:36",
+            "spostamento_successivo": null,
+            "maps_url": "https://www.google.com/maps/search/?api=1&query=Guesthouse+Aurora%2C+Reykjav%C3%ADk%2C+Islanda",
+            "coordinate": {
+              "lat": 64.147,
+              "lng": -21.929
+            }
+          }
+        ],
+        "alloggio_notte": "Guesthouse Aurora",
+        "totali": {
+          "tempo_in_auto_minuti": 225,
+          "distanza_auto_km_stimata": 280,
+          "tempo_in_auto_50kmh_minuti": 336,
+          "camminata_km_ar": 0
+        },
+        "google_maps_percorso_url": "https://www.google.com/maps/dir/?api=1&origin=Fossh%C3%B3tel+N%C3%BApar%2C+Islanda&destination=Guesthouse+Aurora%2C+Reykjav%C3%ADk%2C+Islanda&travelmode=driving"
+      },
+      {
+        "numero": 7,
+        "data": "2026-11-15",
+        "giorno_settimana": "domenica",
+        "luce": {
+          "alba": "09:55",
+          "tramonto": "16:35",
+          "riferimento": "zona Keflavík (Kopa Hotel, posizione stimata)",
+          "nota": "calcolo astronomico, precisione circa ±2 minuti"
+        },
+        "tappe": [
+          {
+            "ordine": 1,
+            "nome": "Partenza da Guesthouse Aurora",
+            "tipo": "partenza",
+            "arrivo": null,
+            "partenza": "14:00",
+            "camminata_km_ar": 0,
+            "luce": "giorno",
+            "note": "Tramonto alle 16:35",
+            "spostamento_successivo": {
+              "mezzo": "auto",
+              "durata_minuti": 60,
+              "distanza_km_stimata": 50,
+              "durata_50kmh_minuti": 60,
+              "km_fonte": "fornito dall'utente"
+            },
+            "maps_url": "https://www.google.com/maps/search/?api=1&query=Guesthouse+Aurora%2C+Islanda",
+            "coordinate": {
+              "lat": 64.147,
+              "lng": -21.929
+            }
+          },
+          {
+            "ordine": 2,
+            "nome": "Blue Lagoon",
+            "tipo": "terme geotermiche",
+            "arrivo": "15:00",
+            "partenza": "20:15",
+            "camminata_km_ar": 0,
+            "luce": "misto",
+            "note": "Luce fino alle 16:35, poi buio",
+            "spostamento_successivo": {
+              "mezzo": "auto",
+              "durata_minuti": 30,
+              "distanza_km_stimata": 25,
+              "durata_50kmh_minuti": 30,
+              "km_fonte": "stima, da verificare"
+            },
+            "maps_url": "https://www.google.com/maps/search/?api=1&query=Blue+Lagoon%2C+Islanda",
+            "coordinate": {
+              "lat": 63.8804,
+              "lng": -22.4495
+            }
+          },
+          {
+            "ordine": 3,
+            "nome": "Kopa Hotel, Keflavík",
+            "tipo": "alloggio",
+            "arrivo": "20:45",
+            "partenza": null,
+            "camminata_km_ar": 0,
+            "luce": "buio",
+            "note": "Pernottamento del 15 novembre. Arrivo dentro la finestra di check-in 16:00–24:00",
+            "spostamento_successivo": null,
+            "maps_url": "https://www.google.com/maps/search/?api=1&query=Kopa+Hotel%2C+Keflav%C3%ADk%2C+Islanda",
+            "coordinate": {
+              "lat": 63.9995,
+              "lng": -22.5715
+            }
+          }
+        ],
+        "alloggio_notte": "Kopa Hotel, Keflavík",
+        "totali": {
+          "tempo_in_auto_minuti": 90,
+          "distanza_auto_km_stimata": 75,
+          "tempo_in_auto_50kmh_minuti": 90,
+          "camminata_km_ar": 0
+        },
+        "google_maps_percorso_url": "https://www.google.com/maps/dir/?api=1&origin=Guesthouse+Aurora%2C+Islanda&destination=Kopa+Hotel%2C+Keflav%C3%ADk%2C+Islanda&travelmode=driving&waypoints=Blue+Lagoon%2C+Islanda"
+      },
+      {
+        "numero": 8,
+        "data": "2026-11-16",
+        "giorno_settimana": "lunedì",
+        "luce": {
+          "alba": "09:58",
+          "tramonto": "16:33",
+          "riferimento": "zona Keflavík (aeroporto, posizione stimata)",
+          "nota": "calcolo astronomico, precisione circa ±2 minuti"
+        },
+        "tappe": [
+          {
+            "ordine": 1,
+            "nome": "Partenza da Kopa Hotel",
+            "tipo": "partenza",
+            "arrivo": null,
+            "partenza": "07:00",
+            "camminata_km_ar": 0,
+            "luce": "buio",
+            "note": "Ancora buio: alba alle 09:58",
+            "spostamento_successivo": {
+              "mezzo": "auto",
+              "durata_minuti": 15,
+              "distanza_km_stimata": 5,
+              "durata_50kmh_minuti": 6,
+              "km_fonte": "stima, da verificare"
+            },
+            "maps_url": "https://www.google.com/maps/search/?api=1&query=Kopa+Hotel%2C+Islanda",
+            "coordinate": {
+              "lat": 63.9995,
+              "lng": -22.5715
+            }
+          },
+          {
+            "ordine": 2,
+            "nome": "Aeroporto di Keflavík",
+            "tipo": "aeroporto",
+            "arrivo": "07:15",
+            "partenza": null,
+            "camminata_km_ar": 0,
+            "luce": "buio",
+            "note": "Orario del volo di ritorno da inserire",
+            "spostamento_successivo": null,
+            "maps_url": "https://www.google.com/maps/search/?api=1&query=Aeroporto+di+Keflav%C3%ADk%2C+Islanda",
+            "coordinate": {
+              "lat": 63.985,
+              "lng": -22.6056
+            }
+          }
+        ],
+        "alloggio_notte": null,
+        "totali": {
+          "tempo_in_auto_minuti": 15,
+          "distanza_auto_km_stimata": 5,
+          "tempo_in_auto_50kmh_minuti": 6,
+          "camminata_km_ar": 0
+        },
+        "google_maps_percorso_url": "https://www.google.com/maps/dir/?api=1&origin=Kopa+Hotel%2C+Islanda&destination=Aeroporto+di+Keflav%C3%ADk%2C+Islanda&travelmode=driving"
+      }
+    ],
+    "da_completare": [
+      "Verificare la distanza stimata Blue Lagoon → Kopa Hotel (25 km) e Kopa Hotel → aeroporto (5 km): non erano nel tuo elenco",
+      "Orario del volo di ritorno (16 novembre)",
+      "Sostituire le distanze stimate con quelle di Google Maps, dove disponibili",
+      "Verificare la finestra di check-in del Kopa Hotel (indicata come 16 alle 24, la notte è del 15)",
+      "Dettagli aggiuntivi da inserire in seguito"
+    ],
+    "soste": {
+      "nota": "Elenco pratico di punti utili lungo o vicino alle tappe del viaggio, non censimento garantito di ogni esercizio. Posizioni, apertura e operatività delle pompe vanno ricontrollate prima della partenza; gli orari possono cambiare.",
+      "esclusi": [
+        "Nettó Höfn: Höfn non è sul percorso"
+      ],
+      "per_giorno": {
+        "1": {
+          "benzinai": [
+            {
+              "nome": "N1 Keflavík Airport",
+              "zona": "Aeroporto di Keflavík",
+              "giorni_utili": [
+                1,
+                8
+              ],
+              "utilita": "Rifornimento all'arrivo o prima della riconsegna dell'auto",
+              "maps_url": "https://www.google.com/maps/search/?api=1&query=N1+Keflavik+Airport",
+              "verifica": "Confermare sede esatta e orari",
+              "coordinate": {
+                "lat": 63.9805,
+                "lng": -22.6076
+              }
+            }
+          ],
+          "supermercati": []
+        },
+        "2": {
+          "benzinai": [
+            {
+              "nome": "Orkan Selfoss",
+              "zona": "Selfoss",
+              "giorni_utili": [
+                1,
+                2
+              ],
+              "utilita": "Alternativa se il percorso passa da Selfoss",
+              "maps_url": "https://www.google.com/maps/search/?api=1&query=Orkan+Selfoss+Iceland",
+              "verifica": "Verificare deviazione rispetto al percorso effettivo",
+              "coordinate": {
+                "lat": 63.9285,
+                "lng": -21.001
+              }
+            },
+            {
+              "nome": "N1 Hvolsvöllur",
+              "zona": "Hvolsvöllur, Route 1",
+              "giorni_utili": [
+                2
+              ],
+              "utilita": "Rabbocco prima di proseguire sulla costa sud",
+              "maps_url": "https://www.google.com/maps/search/?api=1&query=N1+Hvolsvollur+Iceland",
+              "verifica": "Verificare sede e disponibilità del self-service",
+              "coordinate": {
+                "lat": 63.7425,
+                "lng": -20.238
+              }
+            },
+            {
+              "nome": "Olís Hella",
+              "zona": "Hella",
+              "giorni_utili": [
+                2
+              ],
+              "utilita": "Alternativa di rifornimento nella zona di Hella",
+              "maps_url": "https://www.google.com/maps/search/?api=1&query=Olis+Hella+Iceland",
+              "verifica": "Potrebbe richiedere una deviazione",
+              "coordinate": {
+                "lat": 63.8315,
+                "lng": -20.401
+              }
+            },
+            {
+              "nome": "N1 Vík",
+              "zona": "Vík í Mýrdal",
+              "giorni_utili": [
+                2,
+                3,
+                4
+              ],
+              "utilita": "Punto strategico prima dei tratti più isolati della costa sud",
+              "maps_url": "https://www.google.com/maps/search/?api=1&query=N1+gas+station+Vik+Iceland",
+              "verifica": "Verificare sede e orari aggiornati",
+              "coordinate": {
+                "lat": 63.4141,
+                "lng": -19.0084
+              }
+            },
+            {
+              "nome": "Orkan Vík",
+              "zona": "Vík í Mýrdal",
+              "giorni_utili": [
+                2,
+                3,
+                4
+              ],
+              "utilita": "Alternativa di rifornimento a Vík",
+              "maps_url": "https://www.google.com/maps/search/?api=1&query=Orkan+Vik+Iceland",
+              "verifica": "Confermare operatività e posizione esatta",
+              "coordinate": {
+                "lat": 63.4171,
+                "lng": -19.0084
+              }
+            }
+          ],
+          "supermercati": [
+            {
+              "nome": "Bónus Selfoss",
+              "zona": "Selfoss, Larsenstræti 5",
+              "giorni_utili": [
+                1,
+                2
+              ],
+              "utilita": "Spesa conveniente se passate da Selfoss",
+              "maps_url": "https://www.google.com/maps/search/?api=1&query=Bonus+Larsenstraeti+5+Selfoss",
+              "verifica": "Selfoss è utile solo se il percorso effettivo passa dalla zona",
+              "coordinate": {
+                "lat": 63.9285,
+                "lng": -21.001
+              }
+            },
+            {
+              "nome": "Krónan Selfoss",
+              "zona": "Selfoss, Austurvegur 3",
+              "giorni_utili": [
+                1,
+                2
+              ],
+              "utilita": "Supermercato per fare scorta prima della costa sud",
+              "maps_url": "https://www.google.com/maps/search/?api=1&query=Kronan+Austurvegur+3+Selfoss",
+              "verifica": "Verificare l'itinerario e gli orari aggiornati",
+              "coordinate": {
+                "lat": 63.9345,
+                "lng": -21.001
+              }
+            },
+            {
+              "nome": "Samkaup Úrval Selfoss",
+              "zona": "Selfoss, Tryggvagata 40",
+              "giorni_utili": [
+                1,
+                2
+              ],
+              "utilita": "Alternativa per generi alimentari",
+              "maps_url": "https://www.google.com/maps/search/?api=1&query=Samkaup+Urval+Tryggvagata+40+Selfoss",
+              "verifica": "Verificare gli orari aggiornati",
+              "coordinate": {
+                "lat": 63.9375,
+                "lng": -21.001
+              }
+            },
+            {
+              "nome": "Kjörbúðin Hella",
+              "zona": "Hella, Suðurlandsvegur 1",
+              "giorni_utili": [
+                2
+              ],
+              "utilita": "Spesa o snack prima di proseguire verso est",
+              "maps_url": "https://www.google.com/maps/search/?api=1&query=Kjorbudin+Hella+Iceland",
+              "verifica": "Orari domenicali e chiusura serale da controllare",
+              "coordinate": {
+                "lat": 63.8315,
+                "lng": -20.401
+              }
+            },
+            {
+              "nome": "Krónan Hvolsvöllur",
+              "zona": "Hvolsvöllur, Austurvegur 4",
+              "giorni_utili": [
+                2
+              ],
+              "utilita": "Supermercato pratico lungo la Route 1",
+              "maps_url": "https://www.google.com/maps/search/?api=1&query=Kronan+Austurvegur+4+Hvolsvollur",
+              "verifica": "Orari indicativi: controllare prima della partenza",
+              "coordinate": {
+                "lat": 63.7425,
+                "lng": -20.238
+              }
+            },
+            {
+              "nome": "Krónan Vík",
+              "zona": "Vík í Mýrdal, Austurvegur 20",
+              "giorni_utili": [
+                2,
+                3,
+                4
+              ],
+              "utilita": "Ultima grande spesa comoda prima del lungo tratto verso est",
+              "maps_url": "https://www.google.com/maps/search/?api=1&query=Kronan+Austurvegur+20+Vik+Iceland",
+              "verifica": "Particolarmente consigliato per snack, pranzo e provviste",
+              "coordinate": {
+                "lat": 63.4141,
+                "lng": -19.0084
+              }
+            },
+            {
+              "nome": "Kjörbúðin Selfoss",
+              "zona": "Selfoss, Austurvegur 42",
+              "giorni_utili": [
+                1,
+                2
+              ],
+              "utilita": "Alternativa per la spesa nella zona di Selfoss",
+              "maps_url": "https://www.google.com/maps/search/?api=1&query=Kjorbudin+Austurvegur+42+Selfoss",
+              "verifica": "Verificare se il percorso passa da Selfoss",
+              "coordinate": {
+                "lat": 63.9315,
+                "lng": -21.001
+              }
+            }
+          ]
+        },
+        "3": {
+          "benzinai": [
+            {
+              "nome": "N1 Vík",
+              "zona": "Vík í Mýrdal",
+              "giorni_utili": [
+                2,
+                3,
+                4
+              ],
+              "utilita": "Punto strategico prima dei tratti più isolati della costa sud",
+              "maps_url": "https://www.google.com/maps/search/?api=1&query=N1+gas+station+Vik+Iceland",
+              "verifica": "Verificare sede e orari aggiornati",
+              "coordinate": {
+                "lat": 63.4141,
+                "lng": -19.0084
+              }
+            },
+            {
+              "nome": "Orkan Vík",
+              "zona": "Vík í Mýrdal",
+              "giorni_utili": [
+                2,
+                3,
+                4
+              ],
+              "utilita": "Alternativa di rifornimento a Vík",
+              "maps_url": "https://www.google.com/maps/search/?api=1&query=Orkan+Vik+Iceland",
+              "verifica": "Confermare operatività e posizione esatta",
+              "coordinate": {
+                "lat": 63.4171,
+                "lng": -19.0084
+              }
+            }
+          ],
+          "supermercati": [
+            {
+              "nome": "Krónan Vík",
+              "zona": "Vík í Mýrdal, Austurvegur 20",
+              "giorni_utili": [
+                2,
+                3,
+                4
+              ],
+              "utilita": "Ultima grande spesa comoda prima del lungo tratto verso est",
+              "maps_url": "https://www.google.com/maps/search/?api=1&query=Kronan+Austurvegur+20+Vik+Iceland",
+              "verifica": "Particolarmente consigliato per snack, pranzo e provviste",
+              "coordinate": {
+                "lat": 63.4141,
+                "lng": -19.0084
+              }
+            }
+          ]
+        },
+        "4": {
+          "benzinai": [
+            {
+              "nome": "N1 Vík",
+              "zona": "Vík í Mýrdal",
+              "giorni_utili": [
+                2,
+                3,
+                4
+              ],
+              "utilita": "Punto strategico prima dei tratti più isolati della costa sud",
+              "maps_url": "https://www.google.com/maps/search/?api=1&query=N1+gas+station+Vik+Iceland",
+              "verifica": "Verificare sede e orari aggiornati",
+              "coordinate": {
+                "lat": 63.4141,
+                "lng": -19.0084
+              }
+            },
+            {
+              "nome": "Orkan Vík",
+              "zona": "Vík í Mýrdal",
+              "giorni_utili": [
+                2,
+                3,
+                4
+              ],
+              "utilita": "Alternativa di rifornimento a Vík",
+              "maps_url": "https://www.google.com/maps/search/?api=1&query=Orkan+Vik+Iceland",
+              "verifica": "Confermare operatività e posizione esatta",
+              "coordinate": {
+                "lat": 63.4171,
+                "lng": -19.0084
+              }
+            },
+            {
+              "nome": "N1 Skaftárskáli",
+              "zona": "Kirkjubæjarklaustur, Route 1",
+              "giorni_utili": [
+                4,
+                5,
+                6
+              ],
+              "utilita": "Sosta strategica prima di proseguire verso est o tornare a ovest",
+              "maps_url": "https://www.google.com/maps/search/?api=1&query=N1+Skaftarskali+Kirkjubaejarklaustur",
+              "verifica": "La stazione comprende anche negozio/ristoro; verificare gli orari del negozio",
+              "coordinate": {
+                "lat": 63.7755,
+                "lng": -18.025
+              }
+            },
+            {
+              "nome": "ÓB Kirkjubæjarklaustur",
+              "zona": "Kirkjubæjarklaustur",
+              "giorni_utili": [
+                4,
+                5,
+                6
+              ],
+              "utilita": "Possibile alternativa self-service",
+              "maps_url": "https://www.google.com/maps/search/?api=1&query=OB+Kirkjubaejarklaustur",
+              "verifica": "Confermare che la pompa sia attiva",
+              "coordinate": {
+                "lat": 63.7785,
+                "lng": -18.025
+              }
+            },
+            {
+              "nome": "Freysnes fuel station",
+              "zona": "Freysnes, vicino a Skaftafell",
+              "giorni_utili": [
+                4,
+                5,
+                6
+              ],
+              "utilita": "Punto utile nella zona dell'escursione a Skaftafell",
+              "maps_url": "https://www.google.com/maps/search/?api=1&query=Freysnes+gas+station+Iceland",
+              "verifica": "Verificare disponibilità delle pompe e orari a novembre",
+              "coordinate": {
+                "lat": 63.9455,
+                "lng": -17.502
+              }
+            },
+            {
+              "nome": "N1 Fagurhólsmýri",
+              "zona": "Fagurhólsmýri, Route 1",
+              "giorni_utili": [
+                4,
+                5,
+                6
+              ],
+              "utilita": "Alternativa lungo il tratto orientale della costa sud",
+              "maps_url": "https://www.google.com/maps/search/?api=1&query=N1+Fagurholsmyri",
+              "verifica": "Confermare sede e operatività",
+              "coordinate": {
+                "lat": 63.8955,
+                "lng": -17.352
+              }
+            }
+          ],
+          "supermercati": [
+            {
+              "nome": "Krónan Vík",
+              "zona": "Vík í Mýrdal, Austurvegur 20",
+              "giorni_utili": [
+                2,
+                3,
+                4
+              ],
+              "utilita": "Ultima grande spesa comoda prima del lungo tratto verso est",
+              "maps_url": "https://www.google.com/maps/search/?api=1&query=Kronan+Austurvegur+20+Vik+Iceland",
+              "verifica": "Particolarmente consigliato per snack, pranzo e provviste",
+              "coordinate": {
+                "lat": 63.4141,
+                "lng": -19.0084
+              }
+            },
+            {
+              "nome": "Gvendarkjör",
+              "zona": "Kirkjubæjarklaustur",
+              "giorni_utili": [
+                4,
+                5,
+                6
+              ],
+              "utilita": "Piccolo negozio di alimentari in una zona con poche alternative",
+              "maps_url": "https://www.google.com/maps/search/?api=1&query=Gvendarkjor+Kirkjubaejarklaustur",
+              "verifica": "Orari ridotti; verificare soprattutto il sabato e la domenica",
+              "coordinate": {
+                "lat": 63.7755,
+                "lng": -18.025
+              }
+            },
+            {
+              "nome": "N1 Skaftárskáli - negozio",
+              "zona": "Kirkjubæjarklaustur, Route 1",
+              "giorni_utili": [
+                4,
+                5,
+                6
+              ],
+              "utilita": "Snack, bevande e beni di prima necessità; non sostituisce un grande supermercato",
+              "maps_url": "https://www.google.com/maps/search/?api=1&query=N1+Skaftarskali+Kirkjubaejarklaustur",
+              "verifica": "Controllare gli orari del negozio",
+              "coordinate": {
+                "lat": 63.7785,
+                "lng": -18.025
+              }
+            }
+          ]
+        },
+        "5": {
+          "benzinai": [
+            {
+              "nome": "N1 Skaftárskáli",
+              "zona": "Kirkjubæjarklaustur, Route 1",
+              "giorni_utili": [
+                4,
+                5,
+                6
+              ],
+              "utilita": "Sosta strategica prima di proseguire verso est o tornare a ovest",
+              "maps_url": "https://www.google.com/maps/search/?api=1&query=N1+Skaftarskali+Kirkjubaejarklaustur",
+              "verifica": "La stazione comprende anche negozio/ristoro; verificare gli orari del negozio",
+              "coordinate": {
+                "lat": 63.7755,
+                "lng": -18.025
+              }
+            },
+            {
+              "nome": "ÓB Kirkjubæjarklaustur",
+              "zona": "Kirkjubæjarklaustur",
+              "giorni_utili": [
+                4,
+                5,
+                6
+              ],
+              "utilita": "Possibile alternativa self-service",
+              "maps_url": "https://www.google.com/maps/search/?api=1&query=OB+Kirkjubaejarklaustur",
+              "verifica": "Confermare che la pompa sia attiva",
+              "coordinate": {
+                "lat": 63.7785,
+                "lng": -18.025
+              }
+            },
+            {
+              "nome": "Freysnes fuel station",
+              "zona": "Freysnes, vicino a Skaftafell",
+              "giorni_utili": [
+                4,
+                5,
+                6
+              ],
+              "utilita": "Punto utile nella zona dell'escursione a Skaftafell",
+              "maps_url": "https://www.google.com/maps/search/?api=1&query=Freysnes+gas+station+Iceland",
+              "verifica": "Verificare disponibilità delle pompe e orari a novembre",
+              "coordinate": {
+                "lat": 63.9455,
+                "lng": -17.502
+              }
+            },
+            {
+              "nome": "N1 Fagurhólsmýri",
+              "zona": "Fagurhólsmýri, Route 1",
+              "giorni_utili": [
+                4,
+                5,
+                6
+              ],
+              "utilita": "Alternativa lungo il tratto orientale della costa sud",
+              "maps_url": "https://www.google.com/maps/search/?api=1&query=N1+Fagurholsmyri",
+              "verifica": "Confermare sede e operatività",
+              "coordinate": {
+                "lat": 63.8955,
+                "lng": -17.352
+              }
+            }
+          ],
+          "supermercati": [
+            {
+              "nome": "Gvendarkjör",
+              "zona": "Kirkjubæjarklaustur",
+              "giorni_utili": [
+                4,
+                5,
+                6
+              ],
+              "utilita": "Piccolo negozio di alimentari in una zona con poche alternative",
+              "maps_url": "https://www.google.com/maps/search/?api=1&query=Gvendarkjor+Kirkjubaejarklaustur",
+              "verifica": "Orari ridotti; verificare soprattutto il sabato e la domenica",
+              "coordinate": {
+                "lat": 63.7755,
+                "lng": -18.025
+              }
+            },
+            {
+              "nome": "N1 Skaftárskáli - negozio",
+              "zona": "Kirkjubæjarklaustur, Route 1",
+              "giorni_utili": [
+                4,
+                5,
+                6
+              ],
+              "utilita": "Snack, bevande e beni di prima necessità; non sostituisce un grande supermercato",
+              "maps_url": "https://www.google.com/maps/search/?api=1&query=N1+Skaftarskali+Kirkjubaejarklaustur",
+              "verifica": "Controllare gli orari del negozio",
+              "coordinate": {
+                "lat": 63.7785,
+                "lng": -18.025
+              }
+            }
+          ]
+        },
+        "6": {
+          "benzinai": [
+            {
+              "nome": "N1 Skaftárskáli",
+              "zona": "Kirkjubæjarklaustur, Route 1",
+              "giorni_utili": [
+                4,
+                5,
+                6
+              ],
+              "utilita": "Sosta strategica prima di proseguire verso est o tornare a ovest",
+              "maps_url": "https://www.google.com/maps/search/?api=1&query=N1+Skaftarskali+Kirkjubaejarklaustur",
+              "verifica": "La stazione comprende anche negozio/ristoro; verificare gli orari del negozio",
+              "coordinate": {
+                "lat": 63.7755,
+                "lng": -18.025
+              }
+            },
+            {
+              "nome": "ÓB Kirkjubæjarklaustur",
+              "zona": "Kirkjubæjarklaustur",
+              "giorni_utili": [
+                4,
+                5,
+                6
+              ],
+              "utilita": "Possibile alternativa self-service",
+              "maps_url": "https://www.google.com/maps/search/?api=1&query=OB+Kirkjubaejarklaustur",
+              "verifica": "Confermare che la pompa sia attiva",
+              "coordinate": {
+                "lat": 63.7785,
+                "lng": -18.025
+              }
+            },
+            {
+              "nome": "Freysnes fuel station",
+              "zona": "Freysnes, vicino a Skaftafell",
+              "giorni_utili": [
+                4,
+                5,
+                6
+              ],
+              "utilita": "Punto utile nella zona dell'escursione a Skaftafell",
+              "maps_url": "https://www.google.com/maps/search/?api=1&query=Freysnes+gas+station+Iceland",
+              "verifica": "Verificare disponibilità delle pompe e orari a novembre",
+              "coordinate": {
+                "lat": 63.9455,
+                "lng": -17.502
+              }
+            },
+            {
+              "nome": "N1 Fagurhólsmýri",
+              "zona": "Fagurhólsmýri, Route 1",
+              "giorni_utili": [
+                4,
+                5,
+                6
+              ],
+              "utilita": "Alternativa lungo il tratto orientale della costa sud",
+              "maps_url": "https://www.google.com/maps/search/?api=1&query=N1+Fagurholsmyri",
+              "verifica": "Confermare sede e operatività",
+              "coordinate": {
+                "lat": 63.8955,
+                "lng": -17.352
+              }
+            },
+            {
+              "nome": "N1 Reykjavík",
+              "zona": "Reykjavík",
+              "giorni_utili": [
+                6
+              ],
+              "utilita": "Rifornimento al rientro verso la capitale",
+              "maps_url": "https://www.google.com/maps/search/?api=1&query=N1+gas+station+Reykjavik",
+              "verifica": "Scegliere la sede più comoda rispetto alla guesthouse",
+              "coordinate": {
+                "lat": 64.1421,
+                "lng": -21.9446
+              }
+            },
+            {
+              "nome": "Olís Reykjavík",
+              "zona": "Reykjavík",
+              "giorni_utili": [
+                6
+              ],
+              "utilita": "Alternativa di rifornimento in città",
+              "maps_url": "https://www.google.com/maps/search/?api=1&query=Olis+gas+station+Reykjavik",
+              "verifica": "Scegliere la sede più comoda rispetto al percorso",
+              "coordinate": {
+                "lat": 64.1451,
+                "lng": -21.9446
+              }
+            }
+          ],
+          "supermercati": [
+            {
+              "nome": "Gvendarkjör",
+              "zona": "Kirkjubæjarklaustur",
+              "giorni_utili": [
+                4,
+                5,
+                6
+              ],
+              "utilita": "Piccolo negozio di alimentari in una zona con poche alternative",
+              "maps_url": "https://www.google.com/maps/search/?api=1&query=Gvendarkjor+Kirkjubaejarklaustur",
+              "verifica": "Orari ridotti; verificare soprattutto il sabato e la domenica",
+              "coordinate": {
+                "lat": 63.7755,
+                "lng": -18.025
+              }
+            },
+            {
+              "nome": "N1 Skaftárskáli - negozio",
+              "zona": "Kirkjubæjarklaustur, Route 1",
+              "giorni_utili": [
+                4,
+                5,
+                6
+              ],
+              "utilita": "Snack, bevande e beni di prima necessità; non sostituisce un grande supermercato",
+              "maps_url": "https://www.google.com/maps/search/?api=1&query=N1+Skaftarskali+Kirkjubaejarklaustur",
+              "verifica": "Controllare gli orari del negozio",
+              "coordinate": {
+                "lat": 63.7785,
+                "lng": -18.025
+              }
+            },
+            {
+              "nome": "Krónan Reykjavík - Hallveigarstígur",
+              "zona": "Reykjavík, Hallveigarstígur 1",
+              "giorni_utili": [
+                6
+              ],
+              "utilita": "Spesa in città prima della notte alla Guesthouse Aurora",
+              "maps_url": "https://www.google.com/maps/search/?api=1&query=Kronan+Hallveigarstig+1+Reykjavik",
+              "verifica": "Scegliere in base alla posizione effettiva della guesthouse",
+              "coordinate": {
+                "lat": 64.1421,
+                "lng": -21.9446
+              }
+            }
+          ]
+        },
+        "7": {
+          "benzinai": [
+            {
+              "nome": "Orkan Keflavík",
+              "zona": "Keflavík, Hafnargata",
+              "giorni_utili": [
+                7,
+                8
+              ],
+              "utilita": "Rabbocco dopo la Blue Lagoon o prima dell'aeroporto",
+              "maps_url": "https://www.google.com/maps/search/?api=1&query=Orkan+Hafnargata+55+Keflavik",
+              "verifica": "Verificare la sede più vicina al Kopa Hotel",
+              "coordinate": {
+                "lat": 63.9973,
+                "lng": -22.5589
+              }
+            },
+            {
+              "nome": "N1 Keflavík",
+              "zona": "Keflavík",
+              "giorni_utili": [
+                7,
+                8
+              ],
+              "utilita": "Alternativa prima della riconsegna dell'auto",
+              "maps_url": "https://www.google.com/maps/search/?api=1&query=N1+gas+station+Keflavik+Iceland",
+              "verifica": "Scegliere la sede più comoda per il punto di riconsegna",
+              "coordinate": {
+                "lat": 63.9943,
+                "lng": -22.5589
+              }
+            }
+          ],
+          "supermercati": [
+            {
+              "nome": "Krónan Reykjanesbær",
+              "zona": "Njarðvík, Fitjabraut 5",
+              "giorni_utili": [
+                7,
+                8
+              ],
+              "utilita": "Spesa prima o dopo la Blue Lagoon, se comoda rispetto all'itinerario",
+              "maps_url": "https://www.google.com/maps/search/?api=1&query=Kronan+Fitjabraut+5+Njarðvik",
+              "verifica": "È nella zona di Reykjanesbær, non necessariamente sulla strada più diretta per il Kopa Hotel",
+              "coordinate": {
+                "lat": 63.9675,
+                "lng": -22.583
+              }
+            },
+            {
+              "nome": "Kjörbúðin Keflavík",
+              "zona": "Keflavík, Iðavöllum 14",
+              "giorni_utili": [
+                7,
+                8
+              ],
+              "utilita": "Alternativa per acquistare snack e provviste vicino all'ultima notte",
+              "maps_url": "https://www.google.com/maps/search/?api=1&query=Kjorbudin+Idavollum+14+Keflavik",
+              "verifica": "Verificare gli orari e la distanza dal Kopa Hotel",
+              "coordinate": {
+                "lat": 63.9943,
+                "lng": -22.5589
+              }
+            }
+          ]
+        },
+        "8": {
+          "benzinai": [
+            {
+              "nome": "N1 Keflavík Airport",
+              "zona": "Aeroporto di Keflavík",
+              "giorni_utili": [
+                1,
+                8
+              ],
+              "utilita": "Rifornimento all'arrivo o prima della riconsegna dell'auto",
+              "maps_url": "https://www.google.com/maps/search/?api=1&query=N1+Keflavik+Airport",
+              "verifica": "Confermare sede esatta e orari",
+              "coordinate": {
+                "lat": 63.9805,
+                "lng": -22.6076
+              }
+            },
+            {
+              "nome": "Orkan Keflavík",
+              "zona": "Keflavík, Hafnargata",
+              "giorni_utili": [
+                7,
+                8
+              ],
+              "utilita": "Rabbocco dopo la Blue Lagoon o prima dell'aeroporto",
+              "maps_url": "https://www.google.com/maps/search/?api=1&query=Orkan+Hafnargata+55+Keflavik",
+              "verifica": "Verificare la sede più vicina al Kopa Hotel",
+              "coordinate": {
+                "lat": 63.9973,
+                "lng": -22.5589
+              }
+            },
+            {
+              "nome": "N1 Keflavík",
+              "zona": "Keflavík",
+              "giorni_utili": [
+                7,
+                8
+              ],
+              "utilita": "Alternativa prima della riconsegna dell'auto",
+              "maps_url": "https://www.google.com/maps/search/?api=1&query=N1+gas+station+Keflavik+Iceland",
+              "verifica": "Scegliere la sede più comoda per il punto di riconsegna",
+              "coordinate": {
+                "lat": 63.9943,
+                "lng": -22.5589
+              }
+            }
+          ],
+          "supermercati": [
+            {
+              "nome": "Krónan Reykjanesbær",
+              "zona": "Njarðvík, Fitjabraut 5",
+              "giorni_utili": [
+                7,
+                8
+              ],
+              "utilita": "Spesa prima o dopo la Blue Lagoon, se comoda rispetto all'itinerario",
+              "maps_url": "https://www.google.com/maps/search/?api=1&query=Kronan+Fitjabraut+5+Njarðvik",
+              "verifica": "È nella zona di Reykjanesbær, non necessariamente sulla strada più diretta per il Kopa Hotel",
+              "coordinate": {
+                "lat": 63.9675,
+                "lng": -22.583
+              }
+            },
+            {
+              "nome": "Kjörbúðin Keflavík",
+              "zona": "Keflavík, Iðavöllum 14",
+              "giorni_utili": [
+                7,
+                8
+              ],
+              "utilita": "Alternativa per acquistare snack e provviste vicino all'ultima notte",
+              "maps_url": "https://www.google.com/maps/search/?api=1&query=Kjorbudin+Idavollum+14+Keflavik",
+              "verifica": "Verificare gli orari e la distanza dal Kopa Hotel",
+              "coordinate": {
+                "lat": 63.9943,
+                "lng": -22.5589
+              }
+            }
+          ]
+        }
+      }
+    },
+    "nota_coordinate": "Le coordinate sono approssimative (centro della località o stima dalla zona): verificare il pin su Maps prima di partire. I link Maps aprono la ricerca o il percorso con il nome del punto.",
+    "viaggio_completo_mappa": {
+      "nota": "Il tab Mappa della roadmap usa le coordinate sopra, con un colore per giorno e le icone di benzinai e supermercati."
+    }
+  }
+}

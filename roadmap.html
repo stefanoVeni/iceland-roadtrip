@@ -1,0 +1,1578 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Islanda · Roadmap 9–16 novembre 2026</title>
+<style>
+  :root{
+    --bg:#f4f6f8; --card:#ffffff; --ink:#1d2730; --muted:#6b7785;
+    --accent:#1f6f8b; --accent-soft:#e0eef3; --line:#c9d3dc; --car:#b5651d;
+    --ok:#2d7a3e; --no:#a33b2b;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--ink);line-height:1.5}
+  header{background:linear-gradient(135deg,#1f4e6b,#1f6f8b);color:#fff;padding:30px 20px 56px}
+  header .wrap{max-width:720px;margin:0 auto}
+  header h1{margin:0 0 4px;font-size:1.8rem;letter-spacing:-.01em}
+  header p{margin:0;opacity:.9;font-size:.95rem}
+
+  .tabs{display:flex;gap:6px;max-width:720px;margin:-30px auto 0;padding:4px 16px 4px;position:relative;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .tab{flex:0 0 auto;min-width:120px;border:none;background:var(--card);color:var(--muted);padding:12px 10px;border-radius:12px;font:inherit;font-weight:600;cursor:pointer;box-shadow:0 2px 6px rgba(0,0,0,.1)}
+  .tab[aria-selected="true"]{background:var(--accent);color:#fff}
+  .tab small{display:block;font-weight:400;font-size:.75rem;opacity:.85}
+
+  main{max-width:720px;margin:0 auto;padding:24px 16px 64px}
+  .panel{display:none}
+  .panel.active{display:block}
+
+  .nota-km{font-size:.82rem;color:var(--muted);background:var(--card);border-radius:10px;padding:8px 12px;margin-bottom:16px;box-shadow:0 1px 3px rgba(0,0,0,.08)}
+
+  .giorno{font-size:.85rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:0 0 12px}
+  .luce{display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px;background:var(--card);border-radius:12px;padding:12px 16px;box-shadow:0 1px 3px rgba(0,0,0,.08);margin-bottom:12px;font-size:.95rem}
+  .luce b{color:var(--accent)}
+  .luce em{color:var(--muted);font-size:.85rem;font-style:normal;margin-left:auto}
+
+  /* barra della luce del giorno */
+  .tl-wrap{position:relative;height:104px;background:var(--card);border-radius:12px;box-shadow:0 1px 3px rgba(0,0,0,.08);margin-bottom:16px}
+  .tl-area{position:absolute;left:14px;right:14px;top:0;bottom:0}
+  .tl-bar{position:absolute;left:0;right:0;top:30px;height:22px;border-radius:6px;background:#2e3a5a;overflow:hidden}
+  .tl-day{position:absolute;top:0;bottom:0;background:linear-gradient(90deg,#ffe9a8,#ffd166 50%,#ffb36b)}
+  .tl-seg{position:absolute;top:16px;height:6px;border-radius:3px;background:var(--accent)}
+  .tl-num{position:absolute;top:0;font-size:.7rem;font-weight:700;color:var(--accent);transform:translateX(-50%)}
+  .tl-edge{position:absolute;top:56px;font-size:.72rem;color:var(--muted);transform:translateX(-50%);white-space:nowrap}
+  .tl-hour{position:absolute;top:84px;font-size:.68rem;color:var(--muted);transform:translateX(-50%)}
+  .tl-legend{position:absolute;left:0;bottom:4px;font-size:.68rem;color:var(--muted)}
+
+  .stats{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:20px}
+  .stat{background:var(--card);border-radius:10px;padding:10px 14px;min-width:120px;box-shadow:0 1px 3px rgba(0,0,0,.08)}
+  .stat b{display:block;font-size:1.15rem;color:var(--accent)}
+  .stat span{font-size:.8rem;color:var(--muted)}
+
+  .tappa{background:var(--card);border-radius:14px;padding:18px 18px 16px;box-shadow:0 1px 3px rgba(0,0,0,.08)}
+  .tappa-head{display:flex;align-items:center;gap:10px;margin-bottom:4px}
+  .num{background:var(--accent);color:#fff;border-radius:999px;font-size:.75rem;font-weight:600;padding:2px 9px;flex-shrink:0}
+  .tappa h2{font-size:1.15rem;margin:0}
+  .tipo{font-size:.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px}
+  .orari{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}
+  .orario{background:var(--accent-soft);border-radius:8px;padding:5px 10px;font-size:.9rem}
+  .orario b{color:var(--accent)}
+  .badge{display:inline-block;border-radius:999px;padding:2px 10px;font-size:.78rem;font-weight:600;margin-top:4px}
+  .badge.gi{background:#fff4d6;color:#7a5200}
+  .badge.tr{background:#fde3d3;color:#9a3f17}
+  .badge.bu{background:#e4e8f5;color:#2e3a6b}
+  .meta{font-size:.88rem;color:var(--muted);margin:6px 0 0}
+  .nota{margin:8px 0 0;font-size:.92rem}
+  .warn{margin:10px 0 0;background:#fff3f0;border-left:3px solid #c0392b;border-radius:6px;padding:8px 10px;font-size:.88rem}
+  .libero{background:var(--card);border-radius:14px;padding:18px;box-shadow:0 1px 3px rgba(0,0,0,.08);color:var(--muted);font-size:.95rem;text-align:center;margin-bottom:12px}
+  .trasf{display:flex;align-items:center;gap:10px;margin:0 0 0 26px;padding:12px 0 12px 20px;border-left:2px dashed var(--line);font-size:.88rem;color:var(--muted)}
+  .chip{background:#fff;border:1px solid var(--line);border-radius:999px;padding:4px 12px;color:var(--ink);white-space:nowrap}
+  .chip.auto{border-color:var(--car);color:var(--car)}
+
+  /* info hotel */
+  .hotel{margin-top:12px;background:#f7f9fb;border:1px solid var(--line);border-radius:10px;padding:10px 12px;font-size:.86rem;display:grid;gap:5px}
+  .hotel .cucina{font-weight:700}
+  .hotel .cucina.si{color:var(--ok)}
+  .hotel .cucina.no{color:var(--no)}
+  .hotel .riga{color:var(--ink)}
+  .hotel .riga span{color:var(--muted)}
+
+  .summary{background:var(--card);border-radius:14px;padding:16px 18px;box-shadow:0 1px 3px rgba(0,0,0,.08);margin-bottom:16px;font-size:.95rem}
+  .summary strong{color:var(--accent)}
+  .grid{display:grid;gap:12px}
+  .alloggio{background:var(--card);border-radius:14px;padding:16px 18px;box-shadow:0 1px 3px rgba(0,0,0,.08)}
+  .alloggio h2{font-size:1.1rem;margin:0 0 4px}
+  .alloggio .notti{font-size:.8rem;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin-bottom:8px}
+
+  .sub{font-size:1rem;margin:18px 0 10px;color:var(--accent)}
+  .mappa{margin:10px 0 0;font-size:.88rem}
+  .mappa a{color:var(--accent);font-weight:600;text-decoration:none}
+  [hidden]{display:none !important}
+  .filtri{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:flex-end;background:var(--card);border-radius:12px;padding:12px 14px;box-shadow:0 1px 3px rgba(0,0,0,.08);margin-bottom:18px}
+  .filtri label{display:flex;flex-direction:column;gap:4px;font-size:.78rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;flex:1 1 140px}
+  .filtri select{font:inherit;font-size:.95rem;color:var(--ink);background:#fff;border:1px solid var(--line);border-radius:8px;padding:8px 10px}
+  .conteggio{font-size:.85rem;color:var(--accent);font-weight:600;padding-bottom:10px}
+  .fine{font-size:.85rem;color:var(--muted);margin-top:24px;text-align:center}
+  @media (max-width:480px){ header h1{font-size:1.5rem} .trasf{flex-wrap:wrap} .luce em{margin-left:0} }
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css">
+<style>
+  #mappa-map{height:62vh;min-height:420px;border-radius:14px;box-shadow:0 1px 3px rgba(0,0,0,.08);background:#dfe6ec;margin-bottom:16px}
+  .grid-giorni{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px}
+  .dg{background:var(--card);border-radius:12px;padding:12px 14px;border-left:6px solid var(--c,#999);box-shadow:0 1px 3px rgba(0,0,0,.08);font-size:.9rem}
+  .dg strong{color:var(--ink)}
+  .dg span{display:block;color:var(--muted);margin:4px 0 8px;font-size:.85rem}
+  .dg button{font:inherit;font-size:.85rem;font-weight:600;color:var(--accent);background:var(--accent-soft);border:none;border-radius:8px;padding:6px 10px;cursor:pointer}
+  .ico{width:28px;height:28px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;font-size:16px;box-shadow:0 1px 4px rgba(0,0,0,.35);border:2px solid #fff}
+  .leaflet-popup-content{font-size:.9rem;line-height:1.45}
+  .leaflet-popup-content a{color:var(--accent);font-weight:600}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <h1>Islanda · Roadmap</h1>
+    <p>Lunedì 9 – lunedì 16 novembre 2026 · orari in ora islandese (UTC+0, in Italia sono +1 ora)</p>
+  </div>
+</header>
+
+<nav class="tabs" role="tablist">
+  <button class="tab" role="tab" aria-selected="true" aria-controls="mappa" data-tab="mappa">Mappa<small>giro completo</small></button>
+  <button class="tab" role="tab" aria-selected="false" aria-controls="g1" data-tab="g1">Giorno 1<small>lun 9 nov</small></button>
+  <button class="tab" role="tab" aria-selected="false" aria-controls="g2" data-tab="g2">Giorno 2<small>mar 10 nov</small></button>
+  <button class="tab" role="tab" aria-selected="false" aria-controls="g3" data-tab="g3">Giorno 3<small>mer 11 nov</small></button>
+  <button class="tab" role="tab" aria-selected="false" aria-controls="g4" data-tab="g4">Giorno 4<small>gio 12 nov</small></button>
+  <button class="tab" role="tab" aria-selected="false" aria-controls="g5" data-tab="g5">Giorno 5<small>ven 13 nov</small></button>
+  <button class="tab" role="tab" aria-selected="false" aria-controls="g6" data-tab="g6">Giorno 6<small>sab 14 nov</small></button>
+  <button class="tab" role="tab" aria-selected="false" aria-controls="g7" data-tab="g7">Giorno 7<small>dom 15 nov</small></button>
+  <button class="tab" role="tab" aria-selected="false" aria-controls="g8" data-tab="g8">Giorno 8<small>lun 16 nov</small></button>
+  <button class="tab" role="tab" aria-selected="false" aria-controls="alloggi" data-tab="alloggi">Alloggi<small>cucina e orari</small></button>
+  <button class="tab" role="tab" aria-selected="false" aria-controls="soste" data-tab="soste">Soste<small>benzina e spesa</small></button>
+</nav>
+
+<main>
+
+  <p class="nota-km">I km in auto sono stime a spanne, non ricavate da Google Maps: verificali prima di partire. Una sola tratta è stata confermata da una fonte (Jökulsárlón → Skaftafell, 57 km). I tempi sono quelli del piano; tra parentesi il tempo a 50 km/h di media, per stare larghi.</p>
+
+  <!-- MAPPA -->
+  <section class="panel active" id="mappa" role="tabpanel">
+    <p class="giorno">Giro completo · 9–16 novembre</p>
+    <p class="nota-km">Ogni colore è un giorno. Clicca un punto per i dettagli e il link al tab del giorno; dalla legenda puoi nascondere i giorni. Le strade seguono il percorso calcolato con OpenStreetMap (serve connessione); se non si caricano, vedi le linee tratteggiate. Posizioni approssimative: controlla su Maps.</p>
+    <div id="mappa-map"></div>
+    <div class="grid-giorni">
+      <div class="dg" style="--c:#e4572e">
+        <strong>Giorno 1</strong> · lun 9 nov
+        <span>~235 km · 3h 40m in auto</span>
+        <button data-goto="g1">Apri il tab →</button>
+      </div>
+      <div class="dg" style="--c:#f3a712">
+        <strong>Giorno 2</strong> · mar 10 nov
+        <span>~230 km · 3h 45m in auto</span>
+        <button data-goto="g2">Apri il tab →</button>
+      </div>
+      <div class="dg" style="--c:#29335c">
+        <strong>Giorno 3</strong> · mer 11 nov
+        <span>~95 km · 2h 10m in auto</span>
+        <button data-goto="g3">Apri il tab →</button>
+      </div>
+      <div class="dg" style="--c:#2e8b57">
+        <strong>Giorno 4</strong> · gio 12 nov
+        <span>~260 km · 3h 45m in auto</span>
+        <button data-goto="g4">Apri il tab →</button>
+      </div>
+      <div class="dg" style="--c:#8e44ad">
+        <strong>Giorno 5</strong> · ven 13 nov
+        <span>~90 km · 1h 20m in auto</span>
+        <button data-goto="g5">Apri il tab →</button>
+      </div>
+      <div class="dg" style="--c:#1f77b4">
+        <strong>Giorno 6</strong> · sab 14 nov
+        <span>~280 km · 3h 45m in auto</span>
+        <button data-goto="g6">Apri il tab →</button>
+      </div>
+      <div class="dg" style="--c:#d63384">
+        <strong>Giorno 7</strong> · dom 15 nov
+        <span>~75 km · 1h 30m in auto</span>
+        <button data-goto="g7">Apri il tab →</button>
+      </div>
+      <div class="dg" style="--c:#6c757d">
+        <strong>Giorno 8</strong> · lun 16 nov
+        <span>~5 km · 15 min in auto</span>
+        <button data-goto="g8">Apri il tab →</button>
+      </div>
+    </div>
+  </section>
+
+    <!-- GIORNO 1 -->
+  <section class="panel" id="g1" role="tabpanel">
+    <p class="giorno">Lunedì 9 novembre · Giorno 1</p>
+
+    <div class="luce">
+      <span>🌅 Alba <b>09:29</b></span>
+      <span>🌇 Tramonto <b>16:44</b></span>
+      <em>zona Laugarvatn</em>
+    </div>
+    <div class="tl-wrap" data-day="g1"></div>
+
+    <div class="stats">
+      <div class="stat"><b>6</b><span>tappe + notte</span></div>
+      <div class="stat"><b>3h 40m</b><span>in auto</span></div>
+      <div class="stat"><b>~235 km</b><span>in auto (stima)</span></div>
+      <div class="stat"><b>8 km</b><span>a piedi (a/r)</span></div>
+    </div>
+
+        <p class="mappa"><a href="https://www.google.com/maps/dir/?api=1&origin=Keflav%C3%ADk+International+Airport%2C+Islanda&destination=Skyggnir+Bed+and+Breakfast%2C+Islanda&travelmode=driving&waypoints=Parco+nazionale+%C3%9Eingvellir%2C+Islanda%7CStrokkur+Geyser%2C+Islanda%7CGullfoss%2C+Islanda%7CSkyggnir+Bed+and+Breakfast%2C+Islanda%7CSecret+Lagoon%2C+Islanda" target="_blank" rel="noopener">🗺 Percorso del giorno in Maps</a></p>
+    <section class="tappa">
+      <div class="tappa-head"><span class="num">1</span><h2>Keflavík International Airport</h2></div>
+      <div class="tipo">Aeroporto</div>
+      <div class="orari">
+        <span class="orario">Arrivo <b>09:30</b></span>
+        <span class="orario">Partenza <b>11:00</b></span>
+      </div>
+      <span class="badge gi">🌅 Alba appena passata</span>
+      <p class="meta">Tempo a terra: 1h 30m · Ritiro bagagli e auto</p>
+            <p class="mappa"><a href="https://www.google.com/maps/search/?api=1&query=Keflav%C3%ADk+International+Airport%2C+Islanda" target="_blank" rel="noopener">📍 Apri in Maps</a></p>
+      </section>
+    <div class="trasf"><span class="chip auto">🚗 Auto · 1h 40m · ~90 km · a 50 km/h: 1h 48m</span></div>
+
+    <section class="tappa">
+      <div class="tappa-head"><span class="num">2</span><h2>Parco nazionale Þingvellir</h2></div>
+      <div class="tipo">Parco nazionale</div>
+      <div class="orari">
+        <span class="orario">Arrivo <b>13:00</b></span>
+        <span class="orario">Partenza <b>13:30</b></span>
+      </div>
+      <span class="badge gi">☀️ Giorno</span>
+      <p class="meta">Camminata a/r: 3 km</p>
+            <p class="mappa"><a href="https://www.google.com/maps/search/?api=1&query=Parco+nazionale+%C3%9Eingvellir%2C+Islanda" target="_blank" rel="noopener">📍 Apri in Maps</a></p>
+      </section>
+    <div class="trasf"><span class="chip auto">🚗 Auto · 1h · ~60 km · a 50 km/h: 1h 12m</span></div>
+
+    <section class="tappa">
+      <div class="tappa-head"><span class="num">3</span><h2>Strokkur Geyser</h2></div>
+      <div class="tipo">Geyser</div>
+      <div class="orari">
+        <span class="orario">Arrivo <b>14:30</b></span>
+        <span class="orario">Partenza <b>15:00</b></span>
+      </div>
+      <span class="badge gi">☀️ Giorno</span>
+      <p class="meta">Camminata a/r: 3 km</p>
+            <p class="mappa"><a href="https://www.google.com/maps/search/?api=1&query=Strokkur+Geyser%2C+Islanda" target="_blank" rel="noopener">📍 Apri in Maps</a></p>
+      </section>
+    <div class="trasf"><span class="chip auto">🚗 Auto · 10 min · ~10 km · a 50 km/h: 12 min</span></div>
+
+    <section class="tappa">
+      <div class="tappa-head"><span class="num">4</span><h2>Gullfoss</h2></div>
+      <div class="tipo">Cascata</div>
+      <div class="orari">
+        <span class="orario">Arrivo <b>15:20</b></span>
+        <span class="orario">Partenza <b>16:00</b></span>
+      </div>
+      <span class="badge gi">☀️ Giorno</span>
+      <p class="meta">Camminata a/r: 2 km</p>
+      <p class="nota">Alla partenza restano circa 45 minuti di luce.</p>
+            <p class="mappa"><a href="https://www.google.com/maps/search/?api=1&query=Gullfoss%2C+Islanda" target="_blank" rel="noopener">📍 Apri in Maps</a></p>
+      </section>
+    <div class="trasf"><span class="chip auto">🚗 Auto · 30 min · ~35 km · a 50 km/h: 42 min</span></div>
+
+    <section class="tappa">
+      <div class="tappa-head"><span class="num">5</span><h2>Skyggnir Bed and Breakfast</h2></div>
+      <div class="tipo">Alloggio · check-in</div>
+      <div class="orari">
+        <span class="orario">Arrivo <b>16:45</b></span>
+        <span class="orario">Partenza <b>17:15</b></span>
+      </div>
+      <span class="badge tr">🌇 Al tramonto (16:44)</span>
+      <div class="warn">Il check-in apre alle 17:00: all'arrivo alle 16:45 aspettate circa 15 minuti.</div>
+            <p class="mappa"><a href="https://www.google.com/maps/search/?api=1&query=Skyggnir+Bed+and+Breakfast%2C+Islanda" target="_blank" rel="noopener">📍 Apri in Maps</a></p>
+      </section>
+    <div class="trasf"><span class="chip auto">🚗 Auto · 10 min · ~20 km · a 50 km/h: 24 min</span></div>
+
+    <section class="tappa">
+      <div class="tappa-head"><span class="num">6</span><h2>Secret Lagoon</h2></div>
+      <div class="tipo">Terme geotermiche</div>
+      <div class="orari">
+        <span class="orario">Arrivo <b>17:45</b></span>
+        <span class="orario">Partenza <b>19:00</b></span>
+      </div>
+      <span class="badge bu">🌙 Buio</span>
+            <p class="mappa"><a href="https://www.google.com/maps/search/?api=1&query=Secret+Lagoon%2C+Islanda" target="_blank" rel="noopener">📍 Apri in Maps</a></p>
+      </section>
+    <div class="trasf"><span class="chip auto">🚗 Auto · 10 min · ~20 km · a 50 km/h: 24 min</span></div>
+
+    <section class="tappa">
+      <div class="tappa-head"><span class="num">7</span><h2>Skyggnir Bed and Breakfast</h2></div>
+      <div class="tipo">Alloggio · notte</div>
+      <div class="orari">
+        <span class="orario">Arrivo stimato <b>19:10</b></span>
+      </div>
+      <span class="badge bu">🌙 Notte</span>
+      <p class="meta">Pernottamento del 9 novembre</p>
+      <div class="hotel">
+        <span class="cucina si">🍳 Cucina disponibile (private kitchen)</span>
+        <div class="riga">Check-in <span>17:00–22:00</span> · Check-out <span>entro 10:30</span></div>
+        <div class="riga">Colazione <span>inclusa</span> · Parcheggio <span>incluso</span></div>
+      </div>
+            <p class="mappa"><a href="https://www.google.com/maps/search/?api=1&query=Skyggnir+Bed+and+Breakfast%2C+Islanda" target="_blank" rel="noopener">📍 Apri in Maps</a></p>
+      </section>
+  </section>
+
+  <!-- GIORNO 2 -->
+  <section class="panel" id="g2" role="tabpanel">
+    <p class="giorno">Martedì 10 novembre · Giorno 2</p>
+
+    <div class="luce">
+      <span>🌅 Alba <b>09:20</b></span>
+      <span>🌇 Tramonto <b>16:40</b></span>
+      <em>zona sud (Vík)</em>
+    </div>
+    <div class="tl-wrap" data-day="g2"></div>
+
+    <div class="stats">
+      <div class="stat"><b>5</b><span>tappe + notte</span></div>
+      <div class="stat"><b>3h 45m</b><span>in auto</span></div>
+      <div class="stat"><b>~230 km</b><span>in auto (stima)</span></div>
+      <div class="stat"><b>18 km</b><span>a piedi (a/r)</span></div>
+    </div>
+
+        <p class="mappa"><a href="https://www.google.com/maps/dir/?api=1&origin=Skyggnir+Bed+and+Breakfast%2C+Islanda&destination=Guesthouse+Carina%2C+Islanda&travelmode=driving&waypoints=Keri%C3%B0%2C+Islanda%7CSeljalandsfoss+%26+Glj%C3%BAfrab%C3%BAi%2C+Islanda%7CSk%C3%B3gafoss+%26+Kvernufoss%2C+Islanda%7CS%C3%B3lheimaj%C3%B6kull%2C+Islanda%7CSolheimasandur+Plane+Wreck%2C+Islanda" target="_blank" rel="noopener">🗺 Percorso del giorno in Maps</a></p>
+    <section class="tappa">
+      <div class="tappa-head"><span class="num">P</span><h2>Partenza da Skyggnir B&amp;B</h2></div>
+      <div class="tipo">Partenza</div>
+      <div class="orari">
+        <span class="orario">Partenza <b>09:00</b></span>
+      </div>
+      <span class="badge bu">🌙 Ancora buio (alba 09:20)</span>
+            <p class="mappa"><a href="https://www.google.com/maps/search/?api=1&query=Skyggnir+Bed+and+Breakfast%2C+Islanda" target="_blank" rel="noopener">📍 Apri in Maps</a></p>
+      </section>
+    <div class="trasf"><span class="chip auto">🚗 Auto · 40 min · ~45 km · a 50 km/h: 54 min</span></div>
+
+    <section class="tappa">
+      <div class="tappa-head"><span class="num">1</span><h2>Kerið</h2></div>
+      <div class="tipo">Cratere vulcanico</div>
+      <div class="orari">
+        <span class="orario">Arrivo <b>10:00</b></span>
+        <span class="orario">Partenza <b>10:30</b></span>
+      </div>
+      <span class="badge gi">☀️ Giorno</span>
+      <p class="meta">Camminata a/r: 0,5 km</p>
+            <p class="mappa"><a href="https://www.google.com/maps/search/?api=1&query=Keri%C3%B0%2C+Islanda" target="_blank" rel="noopener">📍 Apri in Maps</a></p>
+      </section>
+    <div class="trasf"><span class="chip auto">🚗 Auto · 1h 30m · ~100 km · a 50 km/h: 2h</span></div>
+
+    <section class="tappa">
+      <div class="tappa-head"><span class="num">2</span><h2>Seljalandsfoss &amp; Gljúfrabúi</h2></div>
+      <div class="tipo">Cascata</div>
+      <div class="orari">
+        <span class="orario">Arrivo <b>12:00</b></span>
+        <span class="orario">Partenza <b>13:30</b></span>
+      </div>
+      <span class="badge gi">☀️ Giorno</span>
+      <p class="meta">Camminata a/r: 2 km</p>
+            <p class="mappa"><a href="https://www.google.com/maps/search/?api=1&query=Seljalandsfoss+%26+Glj%C3%BAfrab%C3%BAi%2C+Islanda" target="_blank" rel="noopener">📍 Apri in Maps</a></p>
+      </section>
+    <div class="trasf"><span class="chip auto">🚗 Auto · 30 min · ~25 km · a 50 km/h: 30 min</span></div>
+
+    <section class="tappa">
+      <div class="tappa-head"><span class="num">3</span><h2>Skógafoss &amp; Kvernufoss</h2></div>
+      <div class="tipo">Cascata</div>
+      <div class="orari">
+        <span class="orario">Arrivo <b>14:00</b></span>
+        <span class="orario">Partenza <b>16:30</b></span>
+      </div>
+      <span class="badge gi">☀️ Giorno</span>
+      <p class="meta">Camminata a/r: 5 km</p>
+      <p class="nota">Il tramonto è alle 16:40: la visita si chiude con la luce che cala.</p>
+            <p class="mappa"><a href="https://www.google.com/maps/search/?api=1&query=Sk%C3%B3gafoss+%26+Kvernufoss%2C+Islanda" target="_blank" rel="noopener">📍 Apri in Maps</a></p>
+      </section>
+    <div class="trasf"><span class="chip auto">🚗 Auto · 30 min · ~30 km · a 50 km/h: 36 min</span></div>
+
+    <section class="tappa">
+      <div class="tappa-head"><span class="num">4</span><h2>Sólheimajökull</h2></div>
+      <div class="tipo">Ghiacciaio</div>
+      <div class="orari">
+        <span class="orario">Arrivo <b>17:00</b></span>
+        <span class="orario">Partenza <b>18:00</b></span>
+      </div>
+      <span class="badge bu">🌙 Buio</span>
+      <p class="meta">Camminata a/r: 2,5 km</p>
+      <div class="warn">Quasi tutta la visita è al buio. Sul ghiacciaio servono frontale e attenzione.</div>
+            <p class="mappa"><a href="https://www.google.com/maps/search/?api=1&query=S%C3%B3lheimaj%C3%B6kull%2C+Islanda" target="_blank" rel="noopener">📍 Apri in Maps</a></p>
+      </section>
+    <div class="trasf"><span class="chip auto">🚗 Auto · 15 min · ~10 km · a 50 km/h: 12 min</span></div>
+
+    <section class="tappa">
+      <div class="tappa-head"><span class="num">5</span><h2>Solheimasandur Plane Wreck</h2></div>
+      <div class="tipo">Relitto di aereo</div>
+      <div class="orari">
+        <span class="orario">Arrivo <b>18:15</b></span>
+        <span class="orario">Partenza <b>20:45</b></span>
+      </div>
+      <span class="badge bu">🌙 Buio</span>
+      <p class="meta">Camminata a/r: 8 km (circa 2 ore di cammino + 30 minuti di visita)</p>
+      <div class="warn">Tutta la visita è al buio, e il cammino è lungo: servono frontali e un margine di tempo per il rientro.</div>
+            <p class="mappa"><a href="https://www.google.com/maps/search/?api=1&query=Solheimasandur+Plane+Wreck%2C+Islanda" target="_blank" rel="noopener">📍 Apri in Maps</a></p>
+      </section>
+    <div class="trasf"><span class="chip auto">🚗 Auto · 20 min · ~20 km · a 50 km/h: 24 min</span></div>
+
+    <section class="tappa">
+      <div class="tappa-head"><span class="num">6</span><h2>Guesthouse Carina</h2></div>
+      <div class="tipo">Alloggio · notte</div>
+      <div class="orari">
+        <span class="orario">Arrivo <b>21:05</b></span>
+      </div>
+      <span class="badge bu">🌙 Notte</span>
+      <p class="meta">Pernottamento del 10 novembre</p>
+      <div class="hotel">
+        <span class="cucina no">🚫 Niente cucina</span>
+        <div class="riga">Check-in <span>24 ore</span> · Check-out <span>entro 10:30</span></div>
+        <div class="riga">Colazione <span>non inclusa</span> · Parcheggio <span>incluso</span></div>
+      </div>
+            <p class="mappa"><a href="https://www.google.com/maps/search/?api=1&query=Guesthouse+Carina%2C+Islanda" target="_blank" rel="noopener">📍 Apri in Maps</a></p>
+      </section>
+  </section>
+
+  <!-- GIORNO 3 -->
+  <section class="panel" id="g3" role="tabpanel">
+    <p class="giorno">Mercoledì 11 novembre · Giorno 3</p>
+
+    <div class="luce">
+      <span>🌅 Alba <b>09:24</b></span>
+      <span>🌇 Tramonto <b>16:37</b></span>
+      <em>zona Vík</em>
+    </div>
+    <div class="tl-wrap" data-day="g3"></div>
+
+    <div class="stats">
+      <div class="stat"><b>4</b><span>tappe + notte</span></div>
+      <div class="stat"><b>2h 10m</b><span>in auto</span></div>
+      <div class="stat"><b>~95 km</b><span>in auto (stima)</span></div>
+      <div class="stat"><b>6 km</b><span>a piedi (a/r, dichiarati)</span></div>
+    </div>
+
+        <p class="mappa"><a href="https://www.google.com/maps/dir/?api=1&origin=Guesthouse+Carina%2C+Islanda&destination=Guesthouse+Carina%2C+Islanda&travelmode=driving&waypoints=Dyrh%C3%B3laey%2C+Islanda%7CReynisfjara+Beach%2C+Islanda%7CKatla+Ice+Cave%2C+Islanda%7CG%C3%ADgjagj%C3%A1%2C+Islanda" target="_blank" rel="noopener">🗺 Percorso del giorno in Maps</a></p>
+    <section class="tappa">
+      <div class="tappa-head"><span class="num">P</span><h2>Partenza da Guesthouse Carina</h2></div>
+      <div class="tipo">Partenza</div>
+      <div class="orari">
+        <span class="orario">Partenza <b>09:00</b></span>
+      </div>
+      <span class="badge bu">🌙 Ancora buio (alba 09:24)</span>
+            <p class="mappa"><a href="https://www.google.com/maps/search/?api=1&query=Guesthouse+Carina%2C+Islanda" target="_blank" rel="noopener">📍 Apri in Maps</a></p>
+      </section>
+    <div class="trasf"><span class="chip auto">🚗 Auto · 20 min · ~15 km · a 50 km/h: 18 min</span></div>
+
+    <section class="tappa">
+      <div class="tappa-head"><span class="num">1</span><h2>Dyrhólaey</h2></div>
+      <div class="tipo">Promontorio e faro</div>
+      <div class="orari">
+        <span class="orario">Arrivo <b>09:20</b></span>
+        <span class="orario">Partenza <b>10:30</b></span>
+      </div>
+      <span class="badge gi">🌅 Alba durante la visita (09:24)</span>
+      <p class="meta">Camminata a/r: 1 km</p>
+            <p class="mappa"><a href="https://www.google.com/maps/search/?api=1&query=Dyrh%C3%B3laey%2C+Islanda" target="_blank" rel="noopener">📍 Apri in Maps</a></p>
+      </section>
+    <div class="trasf"><span class="chip auto">🚗 Auto · 20 min · ~5 km · a 50 km/h: 6 min</span></div>
+
+    <section class="tappa">
+      <div class="tappa-head"><span class="num">2</span><h2>Reynisfjara Beach</h2></div>
+      <div class="tipo">Spiaggia nera</div>
+      <div class="orari">
+        <span class="orario">Arrivo <b>11:00</b></span>
+        <span class="orario">Partenza <b>12:00</b></span>
+      </div>
+      <span class="badge gi">☀️ Giorno</span>
+      <p class="meta">Camminata a/r: 1 km</p>
+      <div class="warn">Onde anomale: non dare mai le spalle al mare e stai lontano dalla linea dell'acqua. Segui gli avvisi sul posto.</div>
+            <p class="mappa"><a href="https://www.google.com/maps/search/?api=1&query=Reynisfjara+Beach%2C+Islanda" target="_blank" rel="noopener">📍 Apri in Maps</a></p>
+      </section>
+    <div class="trasf"><span class="chip auto">🚗 Auto · 40 min · ~30 km · a 50 km/h: 36 min</span></div>
+
+    <section class="tappa">
+      <div class="tappa-head"><span class="num">3</span><h2>Katla Ice Cave</h2></div>
+      <div class="tipo">Grotta di ghiaccio</div>
+      <div class="orari">
+        <span class="orario">Arrivo <b>12:40</b></span>
+        <span class="orario">Partenza <b>14:00</b></span>
+      </div>
+      <span class="badge gi">☀️ Giorno</span>
+      <p class="meta">Camminata a/r: 4 km</p>
+      <p class="nota">Le grotte di ghiaccio si visitano di solito solo con guida: verifica che siano aperte a novembre e prenota.</p>
+            <p class="mappa"><a href="https://www.google.com/maps/search/?api=1&query=Katla+Ice+Cave%2C+Islanda" target="_blank" rel="noopener">📍 Apri in Maps</a></p>
+      </section>
+    <div class="trasf"><span class="chip auto">🚗 Auto · 30 min · ~25 km · a 50 km/h: 30 min</span></div>
+
+    <section class="tappa">
+      <div class="tappa-head"><span class="num">4</span><h2>Gígjagjá</h2></div>
+      <div class="tipo">Canyon</div>
+      <div class="orari">
+        <span class="orario">Arrivo <b>14:30</b></span>
+        <span class="orario">Partenza <b>15:00</b></span>
+      </div>
+      <span class="badge gi">☀️ Giorno</span>
+      <p class="meta">Camminata: non indicata</p>
+            <p class="mappa"><a href="https://www.google.com/maps/search/?api=1&query=G%C3%ADgjagj%C3%A1%2C+Islanda" target="_blank" rel="noopener">📍 Apri in Maps</a></p>
+      </section>
+    <div class="trasf"><span class="chip auto">🚗 Auto · 20 min · ~20 km · a 50 km/h: 24 min</span></div>
+
+    <section class="tappa">
+      <div class="tappa-head"><span class="num">5</span><h2>Guesthouse Carina</h2></div>
+      <div class="tipo">Alloggio · notte</div>
+      <div class="orari">
+        <span class="orario">Arrivo <b>15:30</b></span>
+      </div>
+      <span class="badge gi">☀️ Arrivo con luce (tramonto 16:37)</span>
+      <p class="meta">Pernottamento dell'11 novembre</p>
+      <div class="hotel">
+        <span class="cucina no">🚫 Niente cucina</span>
+        <div class="riga">Check-in <span>24 ore</span> · Check-out <span>entro 10:30</span></div>
+        <div class="riga">Colazione <span>non inclusa</span> · Parcheggio <span>incluso</span></div>
+      </div>
+            <p class="mappa"><a href="https://www.google.com/maps/search/?api=1&query=Guesthouse+Carina%2C+Islanda" target="_blank" rel="noopener">📍 Apri in Maps</a></p>
+      </section>
+  </section>
+
+  <!-- GIORNO 4 -->
+  <section class="panel" id="g4" role="tabpanel">
+    <p class="giorno">Giovedì 12 novembre · Giorno 4</p>
+
+    <div class="luce">
+      <span>🌅 Alba <b>09:20</b></span>
+      <span>🌇 Tramonto <b>16:18</b></span>
+      <em>zona Jökulsárlón (stima)</em>
+    </div>
+    <div class="tl-wrap" data-day="g4"></div>
+
+    <div class="stats">
+      <div class="stat"><b>1</b><span>tappa + notte</span></div>
+      <div class="stat"><b>3h 45m</b><span>in auto</span></div>
+      <div class="stat"><b>~260 km</b><span>in auto (stima)</span></div>
+      <div class="stat"><b>n.d.</b><span>a piedi (non indicata)</span></div>
+    </div>
+
+        <p class="mappa"><a href="https://www.google.com/maps/dir/?api=1&origin=Guesthouse+Carina%2C+Islanda&destination=Fosshotel+N%C3%BApar%2C+Islanda&travelmode=driving&waypoints=J%C3%B6kuls%C3%A1rl%C3%B3n+Glacier+Lagoon+%26+Diamond+Beach%2C+Islanda" target="_blank" rel="noopener">🗺 Percorso del giorno in Maps</a></p>
+    <section class="tappa">
+      <div class="tappa-head"><span class="num">P</span><h2>Partenza da Guesthouse Carina</h2></div>
+      <div class="tipo">Partenza</div>
+      <div class="orari">
+        <span class="orario">Partenza <b>09:00</b></span>
+      </div>
+      <span class="badge bu">🌙 Ancora buio all'orario di partenza</span>
+            <p class="mappa"><a href="https://www.google.com/maps/search/?api=1&query=Guesthouse+Carina%2C+Islanda" target="_blank" rel="noopener">📍 Apri in Maps</a></p>
+      </section>
+    <div class="trasf"><span class="chip auto">🚗 Auto · 2h 30m · ~190 km · a 50 km/h: 3h 48m</span></div>
+
+    <section class="tappa">
+      <div class="tappa-head"><span class="num">1</span><h2>Jökulsárlón Glacier Lagoon &amp; Diamond Beach</h2></div>
+      <div class="tipo">Laguna glaciale e spiaggia</div>
+      <div class="orari">
+        <span class="orario">Arrivo <b>11:30</b></span>
+        <span class="orario">Partenza <b>13:30</b></span>
+      </div>
+      <span class="badge gi">☀️ Giorno</span>
+      <p class="meta">Camminata: non indicata</p>
+            <p class="mappa"><a href="https://www.google.com/maps/search/?api=1&query=J%C3%B6kuls%C3%A1rl%C3%B3n+Glacier+Lagoon+%26+Diamond+Beach%2C+Islanda" target="_blank" rel="noopener">📍 Apri in Maps</a></p>
+      </section>
+    <div class="trasf"><span class="chip auto">🚗 Auto · 1h 15m · ~70 km · a 50 km/h: 1h 24m</span></div>
+
+    <section class="tappa">
+      <div class="tappa-head"><span class="num">2</span><h2>Fosshotel Núpar</h2></div>
+      <div class="tipo">Alloggio · notte</div>
+      <div class="orari">
+        <span class="orario">Arrivo <b>15:00</b></span>
+      </div>
+      <span class="badge gi">☀️ Arrivo con luce (tramonto 16:18)</span>
+      <p class="meta">Pernottamento del 12 novembre</p>
+      <div class="hotel">
+        <span class="cucina no">🚫 Niente cucina</span>
+        <div class="riga">Check-in <span>15:00–23:30</span> · Check-out <span>7:00–12:00</span></div>
+        <div class="riga">Colazione <span>non inclusa</span> · Parcheggio <span>incluso</span></div>
+      </div>
+            <p class="mappa"><a href="https://www.google.com/maps/search/?api=1&query=Fosshotel+N%C3%BApar%2C+Islanda" target="_blank" rel="noopener">📍 Apri in Maps</a></p>
+      </section>
+  </section>
+
+  <!-- GIORNO 5 -->
+  <section class="panel" id="g5" role="tabpanel">
+    <p class="giorno">Venerdì 13 novembre · Giorno 5</p>
+
+    <div class="luce">
+      <span>🌅 Alba <b>09:26</b></span>
+      <span>🌇 Tramonto <b>16:19</b></span>
+      <em>zona Skaftafell (stima)</em>
+    </div>
+    <div class="tl-wrap" data-day="g5"></div>
+
+    <div class="stats">
+      <div class="stat"><b>1</b><span>tappa + notte</span></div>
+      <div class="stat"><b>1h 20m</b><span>in auto</span></div>
+      <div class="stat"><b>~90 km</b><span>in auto (stima)</span></div>
+      <div class="stat"><b>n.d.</b><span>a piedi (non indicata)</span></div>
+    </div>
+
+        <p class="mappa"><a href="https://www.google.com/maps/dir/?api=1&origin=Fossh%C3%B3tel+N%C3%BApar%2C+Islanda&destination=Fossh%C3%B3tel+N%C3%BApar%2C+Islanda&travelmode=driving&waypoints=Skaftafell+Blue+Ice+Cave+%26+Svartifoss%2C+Islanda" target="_blank" rel="noopener">🗺 Percorso del giorno in Maps</a></p>
+    <section class="tappa">
+      <div class="tappa-head"><span class="num">P</span><h2>Partenza da Fosshótel Núpar</h2></div>
+      <div class="tipo">Partenza</div>
+      <div class="orari">
+        <span class="orario">Partenza <b>09:00</b></span>
+      </div>
+      <span class="badge bu">🌙 Ancora buio (alba 09:26)</span>
+            <p class="mappa"><a href="https://www.google.com/maps/search/?api=1&query=Fossh%C3%B3tel+N%C3%BApar%2C+Islanda" target="_blank" rel="noopener">📍 Apri in Maps</a></p>
+      </section>
+    <div class="trasf"><span class="chip auto">🚗 Auto · 40 min · ~45 km · a 50 km/h: 54 min</span></div>
+
+    <section class="tappa">
+      <div class="tappa-head"><span class="num">1</span><h2>Skaftafell Blue Ice Cave &amp; Svartifoss</h2></div>
+      <div class="tipo">Esplorazione guidata</div>
+      <div class="orari">
+        <span class="orario">Arrivo <b>09:40</b></span>
+        <span class="orario">Tour guidato <b>10:00–14:00</b></span>
+        <span class="orario">Partenza <b>15:30</b></span>
+      </div>
+      <span class="badge gi">☀️ Giorno</span>
+      <p class="meta">Camminata: non indicata. Tempo libero tra le 14:00 e le 15:30.</p>
+      <div class="warn">Il tour sul ghiaccio blu è guidato: prenota in anticipo e verifica che sia attivo a novembre.</div>
+            <p class="mappa"><a href="https://www.google.com/maps/search/?api=1&query=Skaftafell+Blue+Ice+Cave+%26+Svartifoss%2C+Islanda" target="_blank" rel="noopener">📍 Apri in Maps</a></p>
+      </section>
+    <div class="trasf"><span class="chip auto">🚗 Auto · 40 min · ~45 km · a 50 km/h: 54 min</span></div>
+
+    <section class="tappa">
+      <div class="tappa-head"><span class="num">2</span><h2>Fosshótel Núpar</h2></div>
+      <div class="tipo">Alloggio · notte</div>
+      <div class="orari">
+        <span class="orario">Arrivo <b>16:15</b></span>
+      </div>
+      <span class="badge tr">🌇 Poco prima del tramonto (16:19)</span>
+      <p class="meta">Pernottamento del 13 novembre</p>
+      <p class="nota">Il rientro avviene al crepuscolo: accendi i fari per il tragitto.</p>
+      <div class="hotel">
+        <span class="cucina no">🚫 Niente cucina</span>
+        <div class="riga">Check-in <span>15:00–23:30</span> · Check-out <span>7:00–12:00</span></div>
+        <div class="riga">Colazione <span>non inclusa</span> · Parcheggio <span>incluso</span></div>
+      </div>
+            <p class="mappa"><a href="https://www.google.com/maps/search/?api=1&query=Fossh%C3%B3tel+N%C3%BApar%2C+Islanda" target="_blank" rel="noopener">📍 Apri in Maps</a></p>
+      </section>
+  </section>
+
+  <!-- GIORNO 6 -->
+  <section class="panel" id="g6" role="tabpanel">
+    <p class="giorno">Sabato 14 novembre · Giorno 6</p>
+
+    <div class="luce">
+      <span>🌅 Alba <b>09:51</b></span>
+      <span>🌇 Tramonto <b>16:34</b></span>
+      <em>zona Reykjavík (stima)</em>
+    </div>
+    <div class="tl-wrap" data-day="g6"></div>
+
+    <div class="stats">
+      <div class="stat"><b>1</b><span>tratta in auto</span></div>
+      <div class="stat"><b>3h 45m</b><span>in auto</span></div>
+      <div class="stat"><b>~280 km</b><span>in auto</span></div>
+    </div>
+
+        <p class="mappa"><a href="https://www.google.com/maps/dir/?api=1&origin=Fossh%C3%B3tel+N%C3%BApar%2C+Islanda&destination=Guesthouse+Aurora%2C+Reykjav%C3%ADk%2C+Islanda&travelmode=driving" target="_blank" rel="noopener">🗺 Percorso del giorno in Maps</a></p>
+    <section class="tappa">
+      <div class="tappa-head"><span class="num">P</span><h2>Partenza da Fosshótel Núpar</h2></div>
+      <div class="tipo">Partenza</div>
+      <div class="orari">
+        <span class="orario">Partenza <b>09:00</b></span>
+      </div>
+      <span class="badge bu">🌙 Ancora buio (alba 09:51)</span>
+            <p class="mappa"><a href="https://www.google.com/maps/search/?api=1&query=Fossh%C3%B3tel+N%C3%BApar%2C+Islanda" target="_blank" rel="noopener">📍 Apri in Maps</a></p>
+      </section>
+    <div class="trasf"><span class="chip auto">🚗 Auto · 3h 45m · ~280 km · a 50 km/h: 5h 36m</span></div>
+
+    <section class="tappa">
+      <div class="tappa-head"><span class="num">🏨</span><h2>Guesthouse Aurora, Reykjavík</h2></div>
+      <div class="tipo">Alloggio · notte</div>
+      <div class="orari">
+        <span class="orario">Arrivo <b>12:45</b></span>
+      </div>
+      <span class="badge gi">☀️ Arrivo con luce (tramonto 16:34)</span>
+      <p class="meta">Pernottamento del 14 novembre. Il check-in apre alle 14:00: con l'arrivo alle 12:45 c'è da aspettare circa 1h15. A 50 km/h l'arrivo sarebbe alle 14:36, quindi il check-in sarebbe già aperto.</p>
+      <div class="hotel">
+        <span class="cucina no">🚫 Niente cucina</span>
+        <div class="riga">Check-in <span>14:00–22:00</span> · Check-out <span>entro 11:00</span></div>
+        <div class="riga">Colazione <span>inclusa</span> · Parcheggio <span>incluso</span></div>
+      </div>
+            <p class="mappa"><a href="https://www.google.com/maps/search/?api=1&query=Guesthouse+Aurora%2C+Reykjav%C3%ADk%2C+Islanda" target="_blank" rel="noopener">📍 Apri in Maps</a></p>
+      </section>
+  </section>
+
+  <!-- GIORNO 7 -->
+  <section class="panel" id="g7" role="tabpanel">
+    <p class="giorno">Domenica 15 novembre · Giorno 7</p>
+
+    <div class="luce">
+      <span>🌅 Alba <b>09:55</b></span>
+      <span>🌇 Tramonto <b>16:35</b></span>
+      <em>zona Keflavík (stima)</em>
+    </div>
+    <div class="tl-wrap" data-day="g7"></div>
+
+    <div class="stats">
+      <div class="stat"><b>2</b><span>tratte in auto</span></div>
+      <div class="stat"><b>1h 30m</b><span>in auto</span></div>
+      <div class="stat"><b>~75 km</b><span>in auto (25 km stimati)</span></div>
+    </div>
+
+        <p class="mappa"><a href="https://www.google.com/maps/dir/?api=1&origin=Guesthouse+Aurora%2C+Islanda&destination=Kopa+Hotel%2C+Keflav%C3%ADk%2C+Islanda&travelmode=driving&waypoints=Blue+Lagoon%2C+Islanda" target="_blank" rel="noopener">🗺 Percorso del giorno in Maps</a></p>
+    <section class="tappa">
+      <div class="tappa-head"><span class="num">P</span><h2>Partenza da Guesthouse Aurora</h2></div>
+      <div class="tipo">Partenza</div>
+      <div class="orari">
+        <span class="orario">Partenza <b>14:00</b></span>
+      </div>
+      <span class="badge gi">☀️ Luce (tramonto 16:35)</span>
+            <p class="mappa"><a href="https://www.google.com/maps/search/?api=1&query=Guesthouse+Aurora%2C+Islanda" target="_blank" rel="noopener">📍 Apri in Maps</a></p>
+      </section>
+    <div class="trasf"><span class="chip auto">🚗 Auto · 1h · ~50 km · a 50 km/h: 1h</span></div>
+
+    <section class="tappa">
+      <div class="tappa-head"><span class="num">1</span><h2>Blue Lagoon</h2></div>
+      <div class="tipo">Terme geotermiche</div>
+      <div class="orari">
+        <span class="orario">Arrivo <b>15:00</b></span>
+        <span class="orario">Partenza <b>20:15</b></span>
+      </div>
+      <span class="badge gi">🌗 Luce fino alle 16:35, poi buio</span>
+            <p class="mappa"><a href="https://www.google.com/maps/search/?api=1&query=Blue+Lagoon%2C+Islanda" target="_blank" rel="noopener">📍 Apri in Maps</a></p>
+      </section>
+    <div class="trasf"><span class="chip auto">🚗 Auto · 30 min · ~25 km (stima) · a 50 km/h: 30 min</span></div>
+
+    <section class="tappa">
+      <div class="tappa-head"><span class="num">🏨</span><h2>Kopa Hotel, Keflavík</h2></div>
+      <div class="tipo">Alloggio · notte</div>
+      <div class="orari">
+        <span class="orario">Arrivo <b>20:45</b></span>
+      </div>
+      <span class="badge bu">🌙 Notte</span>
+      <p class="meta">Pernottamento del 15 novembre. L'arrivo alle 20:45 rientra nella finestra di check-in 16:00–24:00.</p>
+      <div class="hotel">
+        <span class="cucina no">🚫 Niente cucina</span>
+        <div class="riga">Check-in <span>16:00–24:00</span> · Check-out <span>entro 10:00</span></div>
+        <div class="riga">Colazione <span>non inclusa</span> · Parcheggio <span>incluso</span></div>
+      </div>
+            <p class="mappa"><a href="https://www.google.com/maps/search/?api=1&query=Kopa+Hotel%2C+Keflav%C3%ADk%2C+Islanda" target="_blank" rel="noopener">📍 Apri in Maps</a></p>
+      </section>
+  </section>
+
+  <!-- GIORNO 8 -->
+  <section class="panel" id="g8" role="tabpanel">
+    <p class="giorno">Lunedì 16 novembre · Giorno 8</p>
+
+    <div class="luce">
+      <span>🌅 Alba <b>09:58</b></span>
+      <span>🌇 Tramonto <b>16:33</b></span>
+      <em>zona Keflavík (stima)</em>
+    </div>
+    <div class="tl-wrap" data-day="g8"></div>
+
+    <div class="stats">
+      <div class="stat"><b>1</b><span>tratta in auto</span></div>
+      <div class="stat"><b>15 min</b><span>in auto</span></div>
+      <div class="stat"><b>~5 km</b><span>in auto (stima)</span></div>
+    </div>
+
+        <p class="mappa"><a href="https://www.google.com/maps/dir/?api=1&origin=Kopa+Hotel%2C+Islanda&destination=Aeroporto+di+Keflav%C3%ADk%2C+Islanda&travelmode=driving" target="_blank" rel="noopener">🗺 Percorso del giorno in Maps</a></p>
+    <section class="tappa">
+      <div class="tappa-head"><span class="num">P</span><h2>Partenza da Kopa Hotel</h2></div>
+      <div class="tipo">Partenza</div>
+      <div class="orari">
+        <span class="orario">Partenza <b>07:00</b></span>
+      </div>
+      <span class="badge bu">🌙 Buio (alba 09:58)</span>
+            <p class="mappa"><a href="https://www.google.com/maps/search/?api=1&query=Kopa+Hotel%2C+Islanda" target="_blank" rel="noopener">📍 Apri in Maps</a></p>
+      </section>
+    <div class="trasf"><span class="chip auto">🚗 Auto · 15 min · ~5 km (stima) · a 50 km/h: 6 min</span></div>
+
+    <section class="tappa">
+      <div class="tappa-head"><span class="num">✈</span><h2>Aeroporto di Keflavík</h2></div>
+      <div class="tipo">Partenza</div>
+      <div class="orari">
+        <span class="orario">Arrivo <b>07:15</b></span>
+        <span class="orario">Volo <b>da definire</b></span>
+      </div>
+      <span class="badge bu">🌙 Buio</span>
+      <p class="meta">Orario del volo di ritorno ancora da inserire.</p>
+            <p class="mappa"><a href="https://www.google.com/maps/search/?api=1&query=Aeroporto+di+Keflav%C3%ADk%2C+Islanda" target="_blank" rel="noopener">📍 Apri in Maps</a></p>
+      </section>
+  </section>
+
+  <!-- ALLOGGI -->
+  <section class="panel" id="alloggi" role="tabpanel">
+    <p class="giorno">Alloggi · cucina e orari</p>
+
+    <div class="summary">
+      <strong>Cucina:</strong> solo il <strong>Skyggnir Bed and Breakfast</strong> ha la cucina privata (notte del 9 novembre). Per le altre notti niente cucina.
+    </div>
+
+    <div class="grid">
+      <section class="alloggio">
+        <h2>Skyggnir Bed and Breakfast</h2>
+        <p class="mappa"><a href="https://www.google.com/maps/search/?api=1&query=Skyggnir+Bed+and+Breakfast%2C+Islanda" target="_blank" rel="noopener">📍 Apri in Maps</a></p>
+        <div class="notti">Notte del 9 novembre</div>
+        <div class="hotel">
+          <span class="cucina si">🍳 Cucina disponibile (private kitchen)</span>
+          <div class="riga">Check-in <span>17:00–22:00</span> · Check-out <span>entro 10:30</span></div>
+          <div class="riga">Colazione <span>inclusa</span> · Parcheggio <span>incluso</span></div>
+        </div>
+      </section>
+
+      <section class="alloggio">
+        <h2>Guesthouse Carina</h2>
+        <p class="mappa"><a href="https://www.google.com/maps/search/?api=1&query=Guesthouse+Carina%2C+Islanda" target="_blank" rel="noopener">📍 Apri in Maps</a></p>
+        <div class="notti">Notti del 10 e dell'11 novembre</div>
+        <div class="hotel">
+          <span class="cucina no">🚫 Niente cucina</span>
+          <div class="riga">Check-in <span>24 ore</span> · Check-out <span>entro 10:30</span></div>
+          <div class="riga">Colazione <span>non inclusa</span> · Parcheggio <span>incluso</span></div>
+        </div>
+      </section>
+
+      <section class="alloggio">
+        <h2>Fosshotel Núpar</h2>
+        <p class="mappa"><a href="https://www.google.com/maps/search/?api=1&query=Fosshotel+N%C3%BApar%2C+Islanda" target="_blank" rel="noopener">📍 Apri in Maps</a></p>
+        <div class="notti">Notti del 12 e del 13 novembre</div>
+        <div class="hotel">
+          <span class="cucina no">🚫 Niente cucina</span>
+          <div class="riga">Check-in <span>15:00–23:30</span> · Check-out <span>7:00–12:00</span></div>
+          <div class="riga">Colazione <span>non inclusa</span> · Parcheggio <span>incluso</span></div>
+        </div>
+      </section>
+
+      <section class="alloggio">
+        <h2>Guesthouse Aurora</h2>
+        <p class="mappa"><a href="https://www.google.com/maps/search/?api=1&query=Guesthouse+Aurora%2C+Islanda" target="_blank" rel="noopener">📍 Apri in Maps</a></p>
+        <div class="notti">Notte del 14 novembre</div>
+        <div class="hotel">
+          <span class="cucina no">🚫 Niente cucina</span>
+          <div class="riga">Check-in <span>14:00–22:00</span> · Check-out <span>entro 11:00</span></div>
+          <div class="riga">Colazione <span>inclusa</span> · Parcheggio <span>incluso</span></div>
+        </div>
+      </section>
+
+      <section class="alloggio">
+        <h2>Kopa Hotel, Keflavík</h2>
+        <p class="mappa"><a href="https://www.google.com/maps/search/?api=1&query=Kopa+Hotel%2C+Keflav%C3%ADk%2C+Islanda" target="_blank" rel="noopener">📍 Apri in Maps</a></p>
+        <div class="notti">Notte del 15 novembre</div>
+        <div class="hotel">
+          <span class="cucina no">🚫 Niente cucina</span>
+          <div class="riga">Check-in <span>16:00–24:00</span> · Check-out <span>entro 10:00</span></div>
+          <div class="riga">Colazione <span>non inclusa</span> · Parcheggio <span>incluso</span></div>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <!-- SOSTE -->
+  <section class="panel" id="soste" role="tabpanel">
+    <p class="giorno">Benzinai e supermercati · per giorno</p>
+    <p class="nota-km">Elenco dal file che mi hai inviato. Posizioni e orari vanno ricontrollati prima di partire, e va verificato che la sosta sia davvero sulla tua strada. Nettó Höfn non è incluso perché Höfn non è sul tuo percorso.</p>
+
+    <div class="filtri">
+      <label>Giorno
+        <select id="f-giorno">
+          <option value="tutti">Tutti</option>
+          <option value="1">Giorno 1 · lun 9</option>
+          <option value="2">Giorno 2 · mar 10</option>
+          <option value="3">Giorno 3 · mer 11</option>
+          <option value="4">Giorno 4 · gio 12</option>
+          <option value="5">Giorno 5 · ven 13</option>
+          <option value="6">Giorno 6 · sab 14</option>
+          <option value="7">Giorno 7 · dom 15</option>
+          <option value="8">Giorno 8 · lun 16</option>
+        </select>
+      </label>
+      <label>Tipo
+        <select id="f-tipo">
+          <option value="tutti">Tutti</option>
+          <option value="benzinai">⛽ Benzinai</option>
+          <option value="supermercati">🛒 Supermercati</option>
+        </select>
+      </label>
+      <span class="conteggio" id="f-count"></span>
+    </div>
+
+    <div class="soste-giorno" data-giorno="1">
+      <p class="giorno">Giorno 1 · Lunedì 9 novembre</p>
+      <p class="nota-km">Oggi non ci sono supermercati lungo il percorso. Il primo rifornimento utile è all&#x27;aeroporto, dove ritiri l&#x27;auto.</p>
+      <div class="soste-tipo" data-tipo="benzinai">
+        <h3 class="sub">⛽ Benzinai</h3>
+        <div class="grid">
+      <section class="tappa">
+        <div class="tappa-head"><span class="num">⛽</span><h2>N1 Keflavík Airport</h2></div>
+        <div class="tipo">Aeroporto di Keflavík</div>
+        <p class="meta">Rifornimento all&#x27;arrivo o prima della riconsegna dell&#x27;auto</p>
+        <p class="nota">Confermare sede esatta e orari</p>
+        <p class="mappa"><a href="https://www.google.com/maps/search/?api=1&amp;query=N1+Keflavik+Airport" target="_blank" rel="noopener">📍 Apri in Maps</a></p>
+      </section>
+        </div>
+      </div>
+      <div class="soste-tipo" data-tipo="supermercati">
+        <h3 class="sub">🛒 Supermercati</h3>
+        <div class="libero">Nessun supermercato in elenco per questo giorno.</div>
+      </div>
+    </div>
+    <div class="soste-giorno" data-giorno="2">
+      <p class="giorno">Giorno 2 · Martedì 10 novembre</p>
+      <p class="nota-km">Giornata con più punti utili. Selfoss e Hella sono sulla Route 1 verso la costa sud; Vík è vicina a Carina, dove dormi.</p>
+      <div class="soste-tipo" data-tipo="benzinai">
+        <h3 class="sub">⛽ Benzinai</h3>
+        <div class="grid">
+      <section class="tappa">
+        <div class="tappa-head"><span class="num">⛽</span><h2>Orkan Selfoss</h2></div>
+        <div class="tipo">Selfoss</div>
+        <p class="meta">Alternativa se il percorso passa da Selfoss</p>
+        <p class="nota">Verificare deviazione rispetto al percorso effettivo</p>
+        <p class="mappa"><a href="https://www.google.com/maps/search/?api=1&amp;query=Orkan+Selfoss+Iceland" target="_blank" rel="noopener">📍 Apri in Maps</a></p>
+      </section>
+      <section class="tappa">
+        <div class="tappa-head"><span class="num">⛽</span><h2>N1 Hvolsvöllur</h2></div>
+        <div class="tipo">Hvolsvöllur, Route 1</div>
+        <p class="meta">Rabbocco prima di proseguire sulla costa sud</p>
+        <p class="nota">Verificare sede e disponibilità del self-service</p>
+        <p class="mappa"><a href="https://www.google.com/maps/search/?api=1&amp;query=N1+Hvolsvollur+Iceland" target="_blank" rel="noopener">📍 Apri in Maps</a></p>
+      </section>
+      <section class="tappa">
+        <div class="tappa-head"><span class="num">⛽</span><h2>Olís Hella</h2></div>
+        <div class="tipo">Hella</div>
+        <p class="meta">Alternativa di rifornimento nella zona di Hella</p>
+        <p class="nota">Potrebbe richiedere una deviazione</p>
+        <p class="mappa"><a href="https://www.google.com/maps/search/?api=1&amp;query=Olis+Hella+Iceland" target="_blank" rel="noopener">📍 Apri in Maps</a></p>
+      </section>
+      <section class="tappa">
+        <div class="tappa-head"><span class="num">⛽</span><h2>N1 Vík</h2></div>
+        <div class="tipo">Vík í Mýrdal</div>
+        <p class="meta">Punto strategico prima dei tratti più isolati della costa sud</p>
+        <p class="nota">Verificare sede e orari aggiornati</p>
+        <p class="mappa"><a href="https://www.google.com/maps/search/?api=1&amp;query=N1+gas+station+Vik+Iceland" target="_blank" rel="noopener">📍 Apri in Maps</a></p>
+      </section>
+      <section class="tappa">
+        <div class="tappa-head"><span class="num">⛽</span><h2>Orkan Vík</h2></div>
+        <div class="tipo">Vík í Mýrdal</div>
+        <p class="meta">Alternativa di rifornimento a Vík</p>
+        <p class="nota">Confermare operatività e posizione esatta</p>
+        <p class="mappa"><a href="https://www.google.com/maps/search/?api=1&amp;query=Orkan+Vik+Iceland" target="_blank" rel="noopener">📍 Apri in Maps</a></p>
+      </section>
+        </div>
+      </div>
+      <div class="soste-tipo" data-tipo="supermercati">
+        <h3 class="sub">🛒 Supermercati</h3>
+        <div class="grid">
+      <section class="tappa">
+        <div class="tappa-head"><span class="num">🛒</span><h2>Bónus Selfoss</h2></div>
+        <div class="tipo">Selfoss, Larsenstræti 5</div>
+        <p class="meta">Spesa conveniente se passate da Selfoss</p>
+        <p class="nota">Selfoss è utile solo se il percorso effettivo passa dalla zona</p>
+        <p class="mappa"><a href="https://www.google.com/maps/search/?api=1&amp;query=Bonus+Larsenstraeti+5+Selfoss" target="_blank" rel="noopener">📍 Apri in Maps</a></p>
+      </section>
+      <section class="tappa">
+        <div class="tappa-head"><span class="num">🛒</span><h2>Krónan Selfoss</h2></div>
+        <div class="tipo">Selfoss, Austurvegur 3</div>
+        <p class="meta">Supermercato per fare scorta prima della costa sud</p>
+        <p class="nota">Verificare l&#x27;itinerario e gli orari aggiornati</p>
+        <p class="mappa"><a href="https://www.google.com/maps/search/?api=1&amp;query=Kronan+Austurvegur+3+Selfoss" target="_blank" rel="noopener">📍 Apri in Maps</a></p>
+      </section>
+      <section class="tappa">
+        <div class="tappa-head"><span class="num">🛒</span><h2>Samkaup Úrval Selfoss</h2></div>
+        <div class="tipo">Selfoss, Tryggvagata 40</div>
+        <p class="meta">Alternativa per generi alimentari</p>
+        <p class="nota">Verificare gli orari aggiornati</p>
+        <p class="mappa"><a href="https://www.google.com/maps/search/?api=1&amp;query=Samkaup+Urval+Tryggvagata+40+Selfoss" target="_blank" rel="noopener">📍 Apri in Maps</a></p>
+      </section>
+      <section class="tappa">
+        <div class="tappa-head"><span class="num">🛒</span><h2>Kjörbúðin Hella</h2></div>
+        <div class="tipo">Hella, Suðurlandsvegur 1</div>
+        <p class="meta">Spesa o snack prima di proseguire verso est</p>
+        <p class="nota">Orari domenicali e chiusura serale da controllare</p>
+        <p class="mappa"><a href="https://www.google.com/maps/search/?api=1&amp;query=Kjorbudin+Hella+Iceland" target="_blank" rel="noopener">📍 Apri in Maps</a></p>
+      </section>
+      <section class="tappa">
+        <div class="tappa-head"><span class="num">🛒</span><h2>Krónan Hvolsvöllur</h2></div>
+        <div class="tipo">Hvolsvöllur, Austurvegur 4</div>
+        <p class="meta">Supermercato pratico lungo la Route 1</p>
+        <p class="nota">Orari indicativi: controllare prima della partenza</p>
+        <p class="mappa"><a href="https://www.google.com/maps/search/?api=1&amp;query=Kronan+Austurvegur+4+Hvolsvollur" target="_blank" rel="noopener">📍 Apri in Maps</a></p>
+      </section>
+      <section class="tappa">
+        <div class="tappa-head"><span class="num">🛒</span><h2>Krónan Vík</h2></div>
+        <div class="tipo">Vík í Mýrdal, Austurvegur 20</div>
+        <p class="meta">Ultima grande spesa comoda prima del lungo tratto verso est</p>
+        <p class="nota">Particolarmente consigliato per snack, pranzo e provviste</p>
+        <p class="mappa"><a href="https://www.google.com/maps/search/?api=1&amp;query=Kronan+Austurvegur+20+Vik+Iceland" target="_blank" rel="noopener">📍 Apri in Maps</a></p>
+      </section>
+      <section class="tappa">
+        <div class="tappa-head"><span class="num">🛒</span><h2>Kjörbúðin Selfoss</h2></div>
+        <div class="tipo">Selfoss, Austurvegur 42</div>
+        <p class="meta">Alternativa per la spesa nella zona di Selfoss</p>
+        <p class="nota">Verificare se il percorso passa da Selfoss</p>
+        <p class="mappa"><a href="https://www.google.com/maps/search/?api=1&amp;query=Kjorbudin+Austurvegur+42+Selfoss" target="_blank" rel="noopener">📍 Apri in Maps</a></p>
+      </section>
+        </div>
+      </div>
+    </div>
+    <div class="soste-giorno" data-giorno="3">
+      <p class="giorno">Giorno 3 · Mercoledì 11 novembre</p>
+      <p class="nota-km">Vík è vicina a Carina e alle tappe di oggi: conviene fare il pieno e la spesa lì prima di partire.</p>
+      <div class="soste-tipo" data-tipo="benzinai">
+        <h3 class="sub">⛽ Benzinai</h3>
+        <div class="grid">
+      <section class="tappa">
+        <div class="tappa-head"><span class="num">⛽</span><h2>N1 Vík</h2></div>
+        <div class="tipo">Vík í Mýrdal</div>
+        <p class="meta">Punto strategico prima dei tratti più isolati della costa sud</p>
+        <p class="nota">Verificare sede e orari aggiornati</p>
+        <p class="mappa"><a href="https://www.google.com/maps/search/?api=1&amp;query=N1+gas+station+Vik+Iceland" target="_blank" rel="noopener">📍 Apri in Maps</a></p>
+      </section>
+      <section class="tappa">
+        <div class="tappa-head"><span class="num">⛽</span><h2>Orkan Vík</h2></div>
+        <div class="tipo">Vík í Mýrdal</div>
+        <p class="meta">Alternativa di rifornimento a Vík</p>
+        <p class="nota">Confermare operatività e posizione esatta</p>
+        <p class="mappa"><a href="https://www.google.com/maps/search/?api=1&amp;query=Orkan+Vik+Iceland" target="_blank" rel="noopener">📍 Apri in Maps</a></p>
+      </section>
+        </div>
+      </div>
+      <div class="soste-tipo" data-tipo="supermercati">
+        <h3 class="sub">🛒 Supermercati</h3>
+        <div class="grid">
+      <section class="tappa">
+        <div class="tappa-head"><span class="num">🛒</span><h2>Krónan Vík</h2></div>
+        <div class="tipo">Vík í Mýrdal, Austurvegur 20</div>
+        <p class="meta">Ultima grande spesa comoda prima del lungo tratto verso est</p>
+        <p class="nota">Particolarmente consigliato per snack, pranzo e provviste</p>
+        <p class="mappa"><a href="https://www.google.com/maps/search/?api=1&amp;query=Kronan+Austurvegur+20+Vik+Iceland" target="_blank" rel="noopener">📍 Apri in Maps</a></p>
+      </section>
+        </div>
+      </div>
+    </div>
+    <div class="soste-giorno" data-giorno="4">
+      <p class="giorno">Giorno 4 · Giovedì 12 novembre</p>
+      <p class="nota-km">Dopo Vík le alternative si fanno rare: fai il pieno e la spesa a Vík. Lungo la strada trovi qualche stazione a Kirkjubæjarklaustur e Fagurhólsmýri, ma gli orari possono essere ridotti.</p>
+      <div class="soste-tipo" data-tipo="benzinai">
+        <h3 class="sub">⛽ Benzinai</h3>
+        <div class="grid">
+      <section class="tappa">
+        <div class="tappa-head"><span class="num">⛽</span><h2>N1 Vík</h2></div>
+        <div class="tipo">Vík í Mýrdal</div>
+        <p class="meta">Punto strategico prima dei tratti più isolati della costa sud</p>
+        <p class="nota">Verificare sede e orari aggiornati</p>
+        <p class="mappa"><a href="https://www.google.com/maps/search/?api=1&amp;query=N1+gas+station+Vik+Iceland" target="_blank" rel="noopener">📍 Apri in Maps</a></p>
+      </section>
+      <section class="tappa">
+        <div class="tappa-head"><span class="num">⛽</span><h2>Orkan Vík</h2></div>
+        <div class="tipo">Vík í Mýrdal</div>
+        <p class="meta">Alternativa di rifornimento a Vík</p>
+        <p class="nota">Confermare operatività e posizione esatta</p>
+        <p class="mappa"><a href="https://www.google.com/maps/search/?api=1&amp;query=Orkan+Vik+Iceland" target="_blank" rel="noopener">📍 Apri in Maps</a></p>
+      </section>
+      <section class="tappa">
+        <div class="tappa-head"><span class="num">⛽</span><h2>N1 Skaftárskáli</h2></div>
+        <div class="tipo">Kirkjubæjarklaustur, Route 1</div>
+        <p class="meta">Sosta strategica prima di proseguire verso est o tornare a ovest</p>
+        <p class="nota">La stazione comprende anche negozio/ristoro; verificare gli orari del negozio</p>
+        <p class="mappa"><a href="https://www.google.com/maps/search/?api=1&amp;query=N1+Skaftarskali+Kirkjubaejarklaustur" target="_blank" rel="noopener">📍 Apri in Maps</a></p>
+      </section>
+      <section class="tappa">
+        <div class="tappa-head"><span class="num">⛽</span><h2>ÓB Kirkjubæjarklaustur</h2></div>
+        <div class="tipo">Kirkjubæjarklaustur</div>
+        <p class="meta">Possibile alternativa self-service</p>
+        <p class="nota">Confermare che la pompa sia attiva</p>
+        <p class="mappa"><a href="https://www.google.com/maps/search/?api=1&amp;query=OB+Kirkjubaejarklaustur" target="_blank" rel="noopener">📍 Apri in Maps</a></p>
+      </section>
+      <section class="tappa">
+        <div class="tappa-head"><span class="num">⛽</span><h2>Freysnes fuel station</h2></div>
+        <div class="tipo">Freysnes, vicino a Skaftafell</div>
+        <p class="meta">Punto utile nella zona dell&#x27;escursione a Skaftafell</p>
+        <p class="nota">Verificare disponibilità delle pompe e orari a novembre</p>
+        <p class="mappa"><a href="https://www.google.com/maps/search/?api=1&amp;query=Freysnes+gas+station+Iceland" target="_blank" rel="noopener">📍 Apri in Maps</a></p>
+      </section>
+      <section class="tappa">
+        <div class="tappa-head"><span class="num">⛽</span><h2>N1 Fagurhólsmýri</h2></div>
+        <div class="tipo">Fagurhólsmýri, Route 1</div>
+        <p class="meta">Alternativa lungo il tratto orientale della costa sud</p>
+        <p class="nota">Confermare sede e operatività</p>
+        <p class="mappa"><a href="https://www.google.com/maps/search/?api=1&amp;query=N1+Fagurholsmyri" target="_blank" rel="noopener">📍 Apri in Maps</a></p>
+      </section>
+        </div>
+      </div>
+      <div class="soste-tipo" data-tipo="supermercati">
+        <h3 class="sub">🛒 Supermercati</h3>
+        <div class="grid">
+      <section class="tappa">
+        <div class="tappa-head"><span class="num">🛒</span><h2>Krónan Vík</h2></div>
+        <div class="tipo">Vík í Mýrdal, Austurvegur 20</div>
+        <p class="meta">Ultima grande spesa comoda prima del lungo tratto verso est</p>
+        <p class="nota">Particolarmente consigliato per snack, pranzo e provviste</p>
+        <p class="mappa"><a href="https://www.google.com/maps/search/?api=1&amp;query=Kronan+Austurvegur+20+Vik+Iceland" target="_blank" rel="noopener">📍 Apri in Maps</a></p>
+      </section>
+      <section class="tappa">
+        <div class="tappa-head"><span class="num">🛒</span><h2>Gvendarkjör</h2></div>
+        <div class="tipo">Kirkjubæjarklaustur</div>
+        <p class="meta">Piccolo negozio di alimentari in una zona con poche alternative</p>
+        <p class="nota">Orari ridotti; verificare soprattutto il sabato e la domenica</p>
+        <p class="mappa"><a href="https://www.google.com/maps/search/?api=1&amp;query=Gvendarkjor+Kirkjubaejarklaustur" target="_blank" rel="noopener">📍 Apri in Maps</a></p>
+      </section>
+      <section class="tappa">
+        <div class="tappa-head"><span class="num">🛒</span><h2>N1 Skaftárskáli - negozio</h2></div>
+        <div class="tipo">Kirkjubæjarklaustur, Route 1</div>
+        <p class="meta">Snack, bevande e beni di prima necessità; non sostituisce un grande supermercato</p>
+        <p class="nota">Controllare gli orari del negozio</p>
+        <p class="mappa"><a href="https://www.google.com/maps/search/?api=1&amp;query=N1+Skaftarskali+Kirkjubaejarklaustur" target="_blank" rel="noopener">📍 Apri in Maps</a></p>
+      </section>
+        </div>
+      </div>
+    </div>
+    <div class="soste-giorno" data-giorno="5">
+      <p class="giorno">Giorno 5 · Venerdì 13 novembre</p>
+      <p class="nota-km">Pochi punti in zona Skaftafell: il file consiglia di portare già le provviste. Controlla se Skaftárskáli, ÓB e Gvendarkjör sono davvero sulla strada Núpar–Skaftafell.</p>
+      <div class="soste-tipo" data-tipo="benzinai">
+        <h3 class="sub">⛽ Benzinai</h3>
+        <div class="grid">
+      <section class="tappa">
+        <div class="tappa-head"><span class="num">⛽</span><h2>N1 Skaftárskáli</h2></div>
+        <div class="tipo">Kirkjubæjarklaustur, Route 1</div>
+        <p class="meta">Sosta strategica prima di proseguire verso est o tornare a ovest</p>
+        <p class="nota">La stazione comprende anche negozio/ristoro; verificare gli orari del negozio</p>
+        <p class="mappa"><a href="https://www.google.com/maps/search/?api=1&amp;query=N1+Skaftarskali+Kirkjubaejarklaustur" target="_blank" rel="noopener">📍 Apri in Maps</a></p>
+      </section>
+      <section class="tappa">
+        <div class="tappa-head"><span class="num">⛽</span><h2>ÓB Kirkjubæjarklaustur</h2></div>
+        <div class="tipo">Kirkjubæjarklaustur</div>
+        <p class="meta">Possibile alternativa self-service</p>
+        <p class="nota">Confermare che la pompa sia attiva</p>
+        <p class="mappa"><a href="https://www.google.com/maps/search/?api=1&amp;query=OB+Kirkjubaejarklaustur" target="_blank" rel="noopener">📍 Apri in Maps</a></p>
+      </section>
+      <section class="tappa">
+        <div class="tappa-head"><span class="num">⛽</span><h2>Freysnes fuel station</h2></div>
+        <div class="tipo">Freysnes, vicino a Skaftafell</div>
+        <p class="meta">Punto utile nella zona dell&#x27;escursione a Skaftafell</p>
+        <p class="nota">Verificare disponibilità delle pompe e orari a novembre</p>
+        <p class="mappa"><a href="https://www.google.com/maps/search/?api=1&amp;query=Freysnes+gas+station+Iceland" target="_blank" rel="noopener">📍 Apri in Maps</a></p>
+      </section>
+      <section class="tappa">
+        <div class="tappa-head"><span class="num">⛽</span><h2>N1 Fagurhólsmýri</h2></div>
+        <div class="tipo">Fagurhólsmýri, Route 1</div>
+        <p class="meta">Alternativa lungo il tratto orientale della costa sud</p>
+        <p class="nota">Confermare sede e operatività</p>
+        <p class="mappa"><a href="https://www.google.com/maps/search/?api=1&amp;query=N1+Fagurholsmyri" target="_blank" rel="noopener">📍 Apri in Maps</a></p>
+      </section>
+        </div>
+      </div>
+      <div class="soste-tipo" data-tipo="supermercati">
+        <h3 class="sub">🛒 Supermercati</h3>
+        <div class="grid">
+      <section class="tappa">
+        <div class="tappa-head"><span class="num">🛒</span><h2>Gvendarkjör</h2></div>
+        <div class="tipo">Kirkjubæjarklaustur</div>
+        <p class="meta">Piccolo negozio di alimentari in una zona con poche alternative</p>
+        <p class="nota">Orari ridotti; verificare soprattutto il sabato e la domenica</p>
+        <p class="mappa"><a href="https://www.google.com/maps/search/?api=1&amp;query=Gvendarkjor+Kirkjubaejarklaustur" target="_blank" rel="noopener">📍 Apri in Maps</a></p>
+      </section>
+      <section class="tappa">
+        <div class="tappa-head"><span class="num">🛒</span><h2>N1 Skaftárskáli - negozio</h2></div>
+        <div class="tipo">Kirkjubæjarklaustur, Route 1</div>
+        <p class="meta">Snack, bevande e beni di prima necessità; non sostituisce un grande supermercato</p>
+        <p class="nota">Controllare gli orari del negozio</p>
+        <p class="mappa"><a href="https://www.google.com/maps/search/?api=1&amp;query=N1+Skaftarskali+Kirkjubaejarklaustur" target="_blank" rel="noopener">📍 Apri in Maps</a></p>
+      </section>
+        </div>
+      </div>
+    </div>
+    <div class="soste-giorno" data-giorno="6">
+      <p class="giorno">Giorno 6 · Sabato 14 novembre</p>
+      <p class="nota-km">Il tragitto Núpar → Reykjavík segue la Route 1: passerai anche Vík, Hvolsvöllur, Hella e Selfoss, che nell&#x27;elenco compaiono solo per i giorni precedenti. A Reykjavík c&#x27;è la spesa vicino ad Aurora.</p>
+      <div class="soste-tipo" data-tipo="benzinai">
+        <h3 class="sub">⛽ Benzinai</h3>
+        <div class="grid">
+      <section class="tappa">
+        <div class="tappa-head"><span class="num">⛽</span><h2>N1 Skaftárskáli</h2></div>
+        <div class="tipo">Kirkjubæjarklaustur, Route 1</div>
+        <p class="meta">Sosta strategica prima di proseguire verso est o tornare a ovest</p>
+        <p class="nota">La stazione comprende anche negozio/ristoro; verificare gli orari del negozio</p>
+        <p class="mappa"><a href="https://www.google.com/maps/search/?api=1&amp;query=N1+Skaftarskali+Kirkjubaejarklaustur" target="_blank" rel="noopener">📍 Apri in Maps</a></p>
+      </section>
+      <section class="tappa">
+        <div class="tappa-head"><span class="num">⛽</span><h2>ÓB Kirkjubæjarklaustur</h2></div>
+        <div class="tipo">Kirkjubæjarklaustur</div>
+        <p class="meta">Possibile alternativa self-service</p>
+        <p class="nota">Confermare che la pompa sia attiva</p>
+        <p class="mappa"><a href="https://www.google.com/maps/search/?api=1&amp;query=OB+Kirkjubaejarklaustur" target="_blank" rel="noopener">📍 Apri in Maps</a></p>
+      </section>
+      <section class="tappa">
+        <div class="tappa-head"><span class="num">⛽</span><h2>Freysnes fuel station</h2></div>
+        <div class="tipo">Freysnes, vicino a Skaftafell</div>
+        <p class="meta">Punto utile nella zona dell&#x27;escursione a Skaftafell</p>
+        <p class="nota">Verificare disponibilità delle pompe e orari a novembre</p>
+        <p class="mappa"><a href="https://www.google.com/maps/search/?api=1&amp;query=Freysnes+gas+station+Iceland" target="_blank" rel="noopener">📍 Apri in Maps</a></p>
+      </section>
+      <section class="tappa">
+        <div class="tappa-head"><span class="num">⛽</span><h2>N1 Fagurhólsmýri</h2></div>
+        <div class="tipo">Fagurhólsmýri, Route 1</div>
+        <p class="meta">Alternativa lungo il tratto orientale della costa sud</p>
+        <p class="nota">Confermare sede e operatività</p>
+        <p class="mappa"><a href="https://www.google.com/maps/search/?api=1&amp;query=N1+Fagurholsmyri" target="_blank" rel="noopener">📍 Apri in Maps</a></p>
+      </section>
+      <section class="tappa">
+        <div class="tappa-head"><span class="num">⛽</span><h2>N1 Reykjavík</h2></div>
+        <div class="tipo">Reykjavík</div>
+        <p class="meta">Rifornimento al rientro verso la capitale</p>
+        <p class="nota">Scegliere la sede più comoda rispetto alla guesthouse</p>
+        <p class="mappa"><a href="https://www.google.com/maps/search/?api=1&amp;query=N1+gas+station+Reykjavik" target="_blank" rel="noopener">📍 Apri in Maps</a></p>
+      </section>
+      <section class="tappa">
+        <div class="tappa-head"><span class="num">⛽</span><h2>Olís Reykjavík</h2></div>
+        <div class="tipo">Reykjavík</div>
+        <p class="meta">Alternativa di rifornimento in città</p>
+        <p class="nota">Scegliere la sede più comoda rispetto al percorso</p>
+        <p class="mappa"><a href="https://www.google.com/maps/search/?api=1&amp;query=Olis+gas+station+Reykjavik" target="_blank" rel="noopener">📍 Apri in Maps</a></p>
+      </section>
+        </div>
+      </div>
+      <div class="soste-tipo" data-tipo="supermercati">
+        <h3 class="sub">🛒 Supermercati</h3>
+        <div class="grid">
+      <section class="tappa">
+        <div class="tappa-head"><span class="num">🛒</span><h2>Gvendarkjör</h2></div>
+        <div class="tipo">Kirkjubæjarklaustur</div>
+        <p class="meta">Piccolo negozio di alimentari in una zona con poche alternative</p>
+        <p class="nota">Orari ridotti; verificare soprattutto il sabato e la domenica</p>
+        <p class="mappa"><a href="https://www.google.com/maps/search/?api=1&amp;query=Gvendarkjor+Kirkjubaejarklaustur" target="_blank" rel="noopener">📍 Apri in Maps</a></p>
+      </section>
+      <section class="tappa">
+        <div class="tappa-head"><span class="num">🛒</span><h2>N1 Skaftárskáli - negozio</h2></div>
+        <div class="tipo">Kirkjubæjarklaustur, Route 1</div>
+        <p class="meta">Snack, bevande e beni di prima necessità; non sostituisce un grande supermercato</p>
+        <p class="nota">Controllare gli orari del negozio</p>
+        <p class="mappa"><a href="https://www.google.com/maps/search/?api=1&amp;query=N1+Skaftarskali+Kirkjubaejarklaustur" target="_blank" rel="noopener">📍 Apri in Maps</a></p>
+      </section>
+      <section class="tappa">
+        <div class="tappa-head"><span class="num">🛒</span><h2>Krónan Reykjavík - Hallveigarstígur</h2></div>
+        <div class="tipo">Reykjavík, Hallveigarstígur 1</div>
+        <p class="meta">Spesa in città prima della notte alla Guesthouse Aurora</p>
+        <p class="nota">Scegliere in base alla posizione effettiva della guesthouse</p>
+        <p class="mappa"><a href="https://www.google.com/maps/search/?api=1&amp;query=Kronan+Hallveigarstig+1+Reykjavik" target="_blank" rel="noopener">📍 Apri in Maps</a></p>
+      </section>
+        </div>
+      </div>
+    </div>
+    <div class="soste-giorno" data-giorno="7">
+      <p class="giorno">Giorno 7 · Domenica 15 novembre</p>
+      <p class="nota-km">Rifornimento e spesa nella zona di Keflavík e Reykjanesbær, vicino al Kopa Hotel.</p>
+      <div class="soste-tipo" data-tipo="benzinai">
+        <h3 class="sub">⛽ Benzinai</h3>
+        <div class="grid">
+      <section class="tappa">
+        <div class="tappa-head"><span class="num">⛽</span><h2>Orkan Keflavík</h2></div>
+        <div class="tipo">Keflavík, Hafnargata</div>
+        <p class="meta">Rabbocco dopo la Blue Lagoon o prima dell&#x27;aeroporto</p>
+        <p class="nota">Verificare la sede più vicina al Kopa Hotel</p>
+        <p class="mappa"><a href="https://www.google.com/maps/search/?api=1&amp;query=Orkan+Hafnargata+55+Keflavik" target="_blank" rel="noopener">📍 Apri in Maps</a></p>
+      </section>
+      <section class="tappa">
+        <div class="tappa-head"><span class="num">⛽</span><h2>N1 Keflavík</h2></div>
+        <div class="tipo">Keflavík</div>
+        <p class="meta">Alternativa prima della riconsegna dell&#x27;auto</p>
+        <p class="nota">Scegliere la sede più comoda per il punto di riconsegna</p>
+        <p class="mappa"><a href="https://www.google.com/maps/search/?api=1&amp;query=N1+gas+station+Keflavik+Iceland" target="_blank" rel="noopener">📍 Apri in Maps</a></p>
+      </section>
+        </div>
+      </div>
+      <div class="soste-tipo" data-tipo="supermercati">
+        <h3 class="sub">🛒 Supermercati</h3>
+        <div class="grid">
+      <section class="tappa">
+        <div class="tappa-head"><span class="num">🛒</span><h2>Krónan Reykjanesbær</h2></div>
+        <div class="tipo">Njarðvík, Fitjabraut 5</div>
+        <p class="meta">Spesa prima o dopo la Blue Lagoon, se comoda rispetto all&#x27;itinerario</p>
+        <p class="nota">È nella zona di Reykjanesbær, non necessariamente sulla strada più diretta per il Kopa Hotel</p>
+        <p class="mappa"><a href="https://www.google.com/maps/search/?api=1&amp;query=Kronan+Fitjabraut+5+Njarðvik" target="_blank" rel="noopener">📍 Apri in Maps</a></p>
+      </section>
+      <section class="tappa">
+        <div class="tappa-head"><span class="num">🛒</span><h2>Kjörbúðin Keflavík</h2></div>
+        <div class="tipo">Keflavík, Iðavöllum 14</div>
+        <p class="meta">Alternativa per acquistare snack e provviste vicino all&#x27;ultima notte</p>
+        <p class="nota">Verificare gli orari e la distanza dal Kopa Hotel</p>
+        <p class="mappa"><a href="https://www.google.com/maps/search/?api=1&amp;query=Kjorbudin+Idavollum+14+Keflavik" target="_blank" rel="noopener">📍 Apri in Maps</a></p>
+      </section>
+        </div>
+      </div>
+    </div>
+    <div class="soste-giorno" data-giorno="8">
+      <p class="giorno">Giorno 8 · Lunedì 16 novembre</p>
+      <p class="nota-km">Rifornisci prima della riconsegna dell&#x27;auto: l&#x27;N1 all&#x27;aeroporto è la scelta più comoda. Alle 07:00 molti esercizi possono essere chiusi: controlla gli orari già la sera prima.</p>
+      <div class="soste-tipo" data-tipo="benzinai">
+        <h3 class="sub">⛽ Benzinai</h3>
+        <div class="grid">
+      <section class="tappa">
+        <div class="tappa-head"><span class="num">⛽</span><h2>N1 Keflavík Airport</h2></div>
+        <div class="tipo">Aeroporto di Keflavík</div>
+        <p class="meta">Rifornimento all&#x27;arrivo o prima della riconsegna dell&#x27;auto</p>
+        <p class="nota">Confermare sede esatta e orari</p>
+        <p class="mappa"><a href="https://www.google.com/maps/search/?api=1&amp;query=N1+Keflavik+Airport" target="_blank" rel="noopener">📍 Apri in Maps</a></p>
+      </section>
+      <section class="tappa">
+        <div class="tappa-head"><span class="num">⛽</span><h2>Orkan Keflavík</h2></div>
+        <div class="tipo">Keflavík, Hafnargata</div>
+        <p class="meta">Rabbocco dopo la Blue Lagoon o prima dell&#x27;aeroporto</p>
+        <p class="nota">Verificare la sede più vicina al Kopa Hotel</p>
+        <p class="mappa"><a href="https://www.google.com/maps/search/?api=1&amp;query=Orkan+Hafnargata+55+Keflavik" target="_blank" rel="noopener">📍 Apri in Maps</a></p>
+      </section>
+      <section class="tappa">
+        <div class="tappa-head"><span class="num">⛽</span><h2>N1 Keflavík</h2></div>
+        <div class="tipo">Keflavík</div>
+        <p class="meta">Alternativa prima della riconsegna dell&#x27;auto</p>
+        <p class="nota">Scegliere la sede più comoda per il punto di riconsegna</p>
+        <p class="mappa"><a href="https://www.google.com/maps/search/?api=1&amp;query=N1+gas+station+Keflavik+Iceland" target="_blank" rel="noopener">📍 Apri in Maps</a></p>
+      </section>
+        </div>
+      </div>
+      <div class="soste-tipo" data-tipo="supermercati">
+        <h3 class="sub">🛒 Supermercati</h3>
+        <div class="grid">
+      <section class="tappa">
+        <div class="tappa-head"><span class="num">🛒</span><h2>Krónan Reykjanesbær</h2></div>
+        <div class="tipo">Njarðvík, Fitjabraut 5</div>
+        <p class="meta">Spesa prima o dopo la Blue Lagoon, se comoda rispetto all&#x27;itinerario</p>
+        <p class="nota">È nella zona di Reykjanesbær, non necessariamente sulla strada più diretta per il Kopa Hotel</p>
+        <p class="mappa"><a href="https://www.google.com/maps/search/?api=1&amp;query=Kronan+Fitjabraut+5+Njarðvik" target="_blank" rel="noopener">📍 Apri in Maps</a></p>
+      </section>
+      <section class="tappa">
+        <div class="tappa-head"><span class="num">🛒</span><h2>Kjörbúðin Keflavík</h2></div>
+        <div class="tipo">Keflavík, Iðavöllum 14</div>
+        <p class="meta">Alternativa per acquistare snack e provviste vicino all&#x27;ultima notte</p>
+        <p class="nota">Verificare gli orari e la distanza dal Kopa Hotel</p>
+        <p class="mappa"><a href="https://www.google.com/maps/search/?api=1&amp;query=Kjorbudin+Idavollum+14+Keflavik" target="_blank" rel="noopener">📍 Apri in Maps</a></p>
+      </section>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <p class="fine">Roadmap in aggiornamento: aggiungeremo altri dettagli in seguito.</p>
+</main>
+
+<script>
+  // Orari di alba/tramonto e tappe (ora locale islandese, UTC+0)
+  const RANGE_START = 6 * 60;   // 06:00
+  const RANGE_END   = 21 * 60;  // 21:00
+
+  const giorni = {
+    g1: {
+      alba: '09:29', tramonto: '16:44',
+      tappe: [
+        ['1', '09:30', '11:00'], ['2', '13:00', '13:30'], ['3', '14:30', '15:00'],
+        ['4', '15:20', '16:00'], ['5', '16:45', '17:15'], ['6', '17:45', '19:00']
+      ]
+    },
+    g2: {
+      alba: '09:20', tramonto: '16:40',
+      tappe: [
+        ['1', '10:00', '10:30'], ['2', '12:00', '13:30'], ['3', '14:00', '16:30'],
+        ['4', '17:00', '18:00'], ['5', '18:15', '20:45']
+      ]
+    },
+    g3: {
+      alba: '09:24', tramonto: '16:37',
+      tappe: [
+        ['1', '09:20', '10:30'], ['2', '11:00', '12:00'], ['3', '12:40', '14:00'],
+        ['4', '14:30', '15:00']
+      ]
+    },
+    g4: {
+      alba: '09:20', tramonto: '16:18',
+      tappe: [
+        ['1', '11:30', '13:30']
+      ]
+    },
+    g5: {
+      alba: '09:26', tramonto: '16:19',
+      tappe: [
+        ['1', '10:00', '15:30']
+      ]
+    },
+    g6: {
+      alba: '09:51', tramonto: '16:34',
+      tappe: [['1', '09:00', '12:45']]
+    },
+    g7: {
+      alba: '09:55', tramonto: '16:35',
+      tappe: [['1', '15:00', '20:15']]
+    },
+    g8: {
+      alba: '09:58', tramonto: '16:33',
+      tappe: [['1', '07:00', '07:15']]
+    }
+  };
+
+  const toMin = t => { const [h, m] = t.split(':').map(Number); return h * 60 + m; };
+  const pct = t => ((toMin(t) - RANGE_START) / (RANGE_END - RANGE_START)) * 100;
+  const pctMin = m => ((m - RANGE_START) / (RANGE_END - RANGE_START)) * 100;
+
+  function el(cls, style, text) {
+    const d = document.createElement('div');
+    d.className = cls;
+    if (style) Object.assign(d.style, style);
+    if (text !== undefined) d.textContent = text;
+    return d;
+  }
+
+  function buildTimeline(wrap) {
+    const g = giorni[wrap.dataset.day];
+    const area = el('tl-area');
+
+    // barra: buio di fondo + luce del giorno (da alba a tramonto)
+    const bar = el('tl-bar');
+    bar.appendChild(el('tl-day', { left: pct(g.alba) + '%', width: (pct(g.tramonto) - pct(g.alba)) + '%' }));
+    area.appendChild(bar);
+
+    // segmenti delle tappe e numeri
+    g.tappe.forEach(([n, da, a]) => {
+      area.appendChild(el('tl-seg', { left: pct(da) + '%', width: (pct(a) - pct(da)) + '%' }));
+      area.appendChild(el('tl-num', { left: pct(da) + '%' }, n));
+    });
+
+    // etichette alba e tramonto sotto la barra
+    area.appendChild(el('tl-edge', { left: pct(g.alba) + '%' }, '🌅 ' + g.alba));
+    area.appendChild(el('tl-edge', { left: pct(g.tramonto) + '%' }, '🌇 ' + g.tramonto));
+
+    // ore di riferimento
+    for (let h = 6; h <= 20; h += 2) {
+      area.appendChild(el('tl-hour', { left: pctMin(h * 60) + '%' }, String(h).padStart(2, '0') + ':00'));
+    }
+
+    area.appendChild(el('tl-legend', null, 'giallo = luce · blu = buio · barre = tappe'));
+    wrap.appendChild(area);
+  }
+
+  document.querySelectorAll('.tl-wrap').forEach(buildTimeline);
+
+  // Tab
+  const tabs = document.querySelectorAll('.tab');
+  const panels = document.querySelectorAll('.panel');
+  tabs.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const target = btn.dataset.tab;
+      tabs.forEach(t => t.setAttribute('aria-selected', t === btn ? 'true' : 'false'));
+      panels.forEach(p => p.classList.toggle('active', p.id === target));
+      btn.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+</script>
+
+<script>
+  (function () {
+    const selG = document.getElementById('f-giorno');
+    const selT = document.getElementById('f-tipo');
+    const cnt = document.getElementById('f-count');
+    if (!selG || !selT) return;
+    function applyFiltri() {
+      const g = selG.value, t = selT.value;
+      let n = 0;
+      document.querySelectorAll('.soste-giorno').forEach(day => {
+        const showDay = g === 'tutti' || day.dataset.giorno === g;
+        day.hidden = !showDay;
+        day.querySelectorAll('.soste-tipo').forEach(s => {
+          const show = showDay && (t === 'tutti' || s.dataset.tipo === t);
+          s.hidden = !show;
+          if (show) n += s.querySelectorAll('.tappa').length;
+        });
+      });
+      cnt.textContent = 'Punti mostrati: ' + n;
+    }
+    selG.addEventListener('change', applyFiltri);
+    selT.addEventListener('change', applyFiltri);
+    applyFiltri();
+  })();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+<script>
+(function () {
+  const GIORNI = [{"n": 1, "label": "lun 9 nov", "color": "#e4572e", "tab": "g1", "km": 235, "tempo": "3h 40m", "stops": [{"nome": "Keflavík International Airport", "lat": 63.985, "lng": -22.6056, "arr": "09:30", "dep": "11:00", "maps": "https://www.google.com/maps/search/?api=1&query=Keflav%C3%ADk+International+Airport%2C+Islanda", "leg": "~90 km · 1h 40m (a 50 km/h: 1h 48m)"}, {"nome": "Parco nazionale Þingvellir", "lat": 64.2559, "lng": -21.1297, "arr": "13:00", "dep": "13:30", "maps": "https://www.google.com/maps/search/?api=1&query=Parco+nazionale+%C3%9Eingvellir%2C+Islanda", "leg": "~60 km · 1h (a 50 km/h: 1h 12m)"}, {"nome": "Strokkur Geyser", "lat": 64.312, "lng": -20.301, "arr": "14:30", "dep": "15:00", "maps": "https://www.google.com/maps/search/?api=1&query=Strokkur+Geyser%2C+Islanda", "leg": "~10 km · 10 min (a 50 km/h: 12 min)"}, {"nome": "Gullfoss", "lat": 64.3271, "lng": -20.1199, "arr": "15:20", "dep": "16:00", "maps": "https://www.google.com/maps/search/?api=1&query=Gullfoss%2C+Islanda", "leg": "~35 km · 30 min (a 50 km/h: 42 min)"}, {"nome": "Skyggnir Bed and Breakfast", "lat": 64.199, "lng": -20.62, "arr": "16:45", "dep": "17:15", "maps": "https://www.google.com/maps/search/?api=1&query=Skyggnir+Bed+and+Breakfast%2C+Islanda", "leg": "~20 km · 10 min (a 50 km/h: 24 min)"}, {"nome": "Secret Lagoon", "lat": 64.1403, "lng": -20.3023, "arr": "17:45", "dep": "19:00", "maps": "https://www.google.com/maps/search/?api=1&query=Secret+Lagoon%2C+Islanda", "leg": "~20 km · 10 min (a 50 km/h: 24 min)"}, {"nome": "Skyggnir Bed and Breakfast", "lat": 64.199, "lng": -20.62, "arr": "19:10", "dep": null, "maps": "https://www.google.com/maps/search/?api=1&query=Skyggnir+Bed+and+Breakfast%2C+Islanda", "leg": null}]}, {"n": 2, "label": "mar 10 nov", "color": "#f3a712", "tab": "g2", "km": 230, "tempo": "3h 45m", "stops": [{"nome": "Partenza da Skyggnir Bed and Breakfast", "lat": 64.199, "lng": -20.62, "arr": null, "dep": "09:00", "maps": "https://www.google.com/maps/search/?api=1&query=Skyggnir+Bed+and+Breakfast%2C+Islanda", "leg": "~45 km · 40 min (a 50 km/h: 54 min)"}, {"nome": "Kerið", "lat": 64.0644, "lng": -20.905, "arr": "10:00", "dep": "10:30", "maps": "https://www.google.com/maps/search/?api=1&query=Keri%C3%B0%2C+Islanda", "leg": "~100 km · 1h 30m (a 50 km/h: 2h)"}, {"nome": "Seljalandsfoss & Gljúfrabúi", "lat": 63.6156, "lng": -19.9886, "arr": "12:00", "dep": "13:30", "maps": "https://www.google.com/maps/search/?api=1&query=Seljalandsfoss+%26+Glj%C3%BAfrab%C3%BAi%2C+Islanda", "leg": "~25 km · 30 min (a 50 km/h: 30 min)"}, {"nome": "Skógafoss & Kvernufoss", "lat": 63.5321, "lng": -19.5113, "arr": "14:00", "dep": "16:30", "maps": "https://www.google.com/maps/search/?api=1&query=Sk%C3%B3gafoss+%26+Kvernufoss%2C+Islanda", "leg": "~30 km · 30 min (a 50 km/h: 36 min)"}, {"nome": "Sólheimajökull", "lat": 63.535, "lng": -19.36, "arr": "17:00", "dep": "18:00", "maps": "https://www.google.com/maps/search/?api=1&query=S%C3%B3lheimaj%C3%B6kull%2C+Islanda", "leg": "~10 km · 15 min (a 50 km/h: 12 min)"}, {"nome": "Solheimasandur Plane Wreck", "lat": 63.463, "lng": -19.385, "arr": "18:15", "dep": "20:45", "maps": "https://www.google.com/maps/search/?api=1&query=Solheimasandur+Plane+Wreck%2C+Islanda", "leg": "~20 km · 20 min (a 50 km/h: 24 min)"}, {"nome": "Guesthouse Carina", "lat": 63.4186, "lng": -19.0064, "arr": "21:05", "dep": null, "maps": "https://www.google.com/maps/search/?api=1&query=Guesthouse+Carina%2C+Islanda", "leg": null}]}, {"n": 3, "label": "mer 11 nov", "color": "#29335c", "tab": "g3", "km": 95, "tempo": "2h 10m", "stops": [{"nome": "Partenza da Guesthouse Carina", "lat": 63.4186, "lng": -19.0064, "arr": null, "dep": "09:00", "maps": "https://www.google.com/maps/search/?api=1&query=Guesthouse+Carina%2C+Islanda", "leg": "~15 km · 20 min (a 50 km/h: 18 min)"}, {"nome": "Dyrhólaey", "lat": 63.4029, "lng": -19.1356, "arr": "09:20", "dep": "10:30", "maps": "https://www.google.com/maps/search/?api=1&query=Dyrh%C3%B3laey%2C+Islanda", "leg": "~5 km · 20 min (a 50 km/h: 6 min)"}, {"nome": "Reynisfjara Beach", "lat": 63.4057, "lng": -19.0487, "arr": "11:00", "dep": "12:00", "maps": "https://www.google.com/maps/search/?api=1&query=Reynisfjara+Beach%2C+Islanda", "leg": "~30 km · 40 min (a 50 km/h: 36 min)"}, {"nome": "Katla Ice Cave", "lat": 63.485, "lng": -19.105, "arr": "12:40", "dep": "14:00", "maps": "https://www.google.com/maps/search/?api=1&query=Katla+Ice+Cave%2C+Islanda", "leg": "~25 km · 30 min (a 50 km/h: 30 min)"}, {"nome": "Gígjagjá", "lat": 63.629, "lng": -19.104, "arr": "14:30", "dep": "15:00", "maps": "https://www.google.com/maps/search/?api=1&query=G%C3%ADgjagj%C3%A1%2C+Islanda", "leg": "~20 km · 20 min (a 50 km/h: 24 min)"}, {"nome": "Guesthouse Carina", "lat": 63.4186, "lng": -19.0064, "arr": "15:30", "dep": null, "maps": "https://www.google.com/maps/search/?api=1&query=Guesthouse+Carina%2C+Islanda", "leg": null}]}, {"n": 4, "label": "gio 12 nov", "color": "#2e8b57", "tab": "g4", "km": 260, "tempo": "3h 45m", "stops": [{"nome": "Partenza da Guesthouse Carina", "lat": 63.4186, "lng": -19.0064, "arr": null, "dep": "09:00", "maps": "https://www.google.com/maps/search/?api=1&query=Guesthouse+Carina%2C+Islanda", "leg": "~190 km · 2h 30m (a 50 km/h: 3h 48m)"}, {"nome": "Jökulsárlón Glacier Lagoon & Diamond Beach", "lat": 64.0784, "lng": -16.2307, "arr": "11:30", "dep": "13:30", "maps": "https://www.google.com/maps/search/?api=1&query=J%C3%B6kuls%C3%A1rl%C3%B3n+Glacier+Lagoon+%26+Diamond+Beach%2C+Islanda", "leg": "~70 km · 1h 15m (a 50 km/h: 1h 24m)"}, {"nome": "Fosshotel Núpar", "lat": 63.933, "lng": -17.8, "arr": "15:00", "dep": null, "maps": "https://www.google.com/maps/search/?api=1&query=Fosshotel+N%C3%BApar%2C+Islanda", "leg": null}]}, {"n": 5, "label": "ven 13 nov", "color": "#8e44ad", "tab": "g5", "km": 90, "tempo": "1h 20m", "stops": [{"nome": "Partenza da Fosshótel Núpar", "lat": 63.933, "lng": -17.8, "arr": null, "dep": "09:00", "maps": "https://www.google.com/maps/search/?api=1&query=Fossh%C3%B3tel+N%C3%BApar%2C+Islanda", "leg": "~45 km · 40 min (a 50 km/h: 54 min)"}, {"nome": "Skaftafell Blue Ice Cave & Svartifoss", "lat": 63.9896, "lng": -16.9977, "arr": "09:40", "dep": "15:30", "maps": "https://www.google.com/maps/search/?api=1&query=Skaftafell+Blue+Ice+Cave+%26+Svartifoss%2C+Islanda", "leg": "~45 km · 40 min (a 50 km/h: 54 min)"}, {"nome": "Fosshótel Núpar", "lat": 63.933, "lng": -17.8, "arr": "16:15", "dep": null, "maps": "https://www.google.com/maps/search/?api=1&query=Fossh%C3%B3tel+N%C3%BApar%2C+Islanda", "leg": null}]}, {"n": 6, "label": "sab 14 nov", "color": "#1f77b4", "tab": "g6", "km": 280, "tempo": "3h 45m", "stops": [{"nome": "Partenza da Fosshótel Núpar", "lat": 63.933, "lng": -17.8, "arr": null, "dep": "09:00", "maps": "https://www.google.com/maps/search/?api=1&query=Fossh%C3%B3tel+N%C3%BApar%2C+Islanda", "leg": "~280 km · 3h 45m (a 50 km/h: 5h 36m)"}, {"nome": "Guesthouse Aurora, Reykjavík", "lat": 64.147, "lng": -21.929, "arr": "12:45", "dep": null, "maps": "https://www.google.com/maps/search/?api=1&query=Guesthouse+Aurora%2C+Reykjav%C3%ADk%2C+Islanda", "leg": null}]}, {"n": 7, "label": "dom 15 nov", "color": "#d63384", "tab": "g7", "km": 75, "tempo": "1h 30m", "stops": [{"nome": "Partenza da Guesthouse Aurora", "lat": 64.147, "lng": -21.929, "arr": null, "dep": "14:00", "maps": "https://www.google.com/maps/search/?api=1&query=Guesthouse+Aurora%2C+Islanda", "leg": "~50 km · 1h (a 50 km/h: 1h)"}, {"nome": "Blue Lagoon", "lat": 63.8804, "lng": -22.4495, "arr": "15:00", "dep": "20:15", "maps": "https://www.google.com/maps/search/?api=1&query=Blue+Lagoon%2C+Islanda", "leg": "~25 km · 30 min (a 50 km/h: 30 min)"}, {"nome": "Kopa Hotel, Keflavík", "lat": 63.9995, "lng": -22.5715, "arr": "20:45", "dep": null, "maps": "https://www.google.com/maps/search/?api=1&query=Kopa+Hotel%2C+Keflav%C3%ADk%2C+Islanda", "leg": null}]}, {"n": 8, "label": "lun 16 nov", "color": "#6c757d", "tab": "g8", "km": 5, "tempo": "15 min", "stops": [{"nome": "Partenza da Kopa Hotel", "lat": 63.9995, "lng": -22.5715, "arr": null, "dep": "07:00", "maps": "https://www.google.com/maps/search/?api=1&query=Kopa+Hotel%2C+Islanda", "leg": "~5 km · 15 min (a 50 km/h: 6 min)"}, {"nome": "Aeroporto di Keflavík", "lat": 63.985, "lng": -22.6056, "arr": "07:15", "dep": null, "maps": "https://www.google.com/maps/search/?api=1&query=Aeroporto+di+Keflav%C3%ADk%2C+Islanda", "leg": null}]}];
+
+  function goto(tab) {
+    const b = document.querySelector('.tab[data-tab="' + tab + '"]');
+    if (b) b.click();
+  }
+
+  const map = L.map('mappa-map').setView([64.2, -19.5], 7);
+  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
+    maxZoom: 19,
+    attribution: 'Tiles &copy; Esri, HERE, Garmin, OpenStreetMap contributors'
+  }).addTo(map);
+
+  const overlays = {};
+  const bounds = [];
+
+  function popupHtml(d, s, i) {
+    let t = '<strong>' + s.nome + '</strong><br>Giorno ' + d.n + ' · tappa ' + (i + 1) + '<br>';
+    if (s.arr) t += 'Arrivo ' + s.arr + ' ';
+    if (s.dep) t += '· Partenza ' + s.dep + '<br>';
+    if (s.leg) t += '➜ prossima tratta: ' + s.leg + '<br>';
+    if (s.maps) t += '<a href="' + s.maps + '" target="_blank" rel="noopener">📍 Apri in Maps</a><br>';
+    t += '<a href="#" data-goto="' + d.tab + '">→ Vai al tab Giorno ' + d.n + '</a>';
+    return t;
+  }
+
+  function fetchRoad(d) {
+    const coords = d.stops.map(s => s.lng + ',' + s.lat).join(';');
+    const url = 'https://router.project-osrm.org/route/v1/driving/' + coords + '?overview=full&geometries=geojson';
+    return fetch(url)
+      .then(r => r.json())
+      .then(j => (j.routes && j.routes[0]) ? j.routes[0].geometry.coordinates.map(c => [c[1], c[0]]) : null)
+      .catch(() => null);
+  }
+
+  GIORNI.forEach(d => {
+    const group = L.layerGroup();
+    const pts = d.stops.map(s => [s.lat, s.lng]);
+    const fallback = L.polyline(pts, { color: d.color, weight: 3, opacity: 0.6, dashArray: '6 8' });
+    group.addLayer(fallback);
+
+    d.stops.forEach((s, i) => {
+      const m = L.circleMarker([s.lat, s.lng], {
+        radius: 8, color: '#fff', weight: 2, fillColor: d.color, fillOpacity: 1
+      });
+      m.bindTooltip(d.n + ' · ' + (i + 1) + ' · ' + s.nome, { direction: 'top' });
+      m.bindPopup(popupHtml(d, s, i), { maxWidth: 280 });
+      group.addLayer(m);
+      bounds.push([s.lat, s.lng]);
+    });
+
+    overlays['<span style="color:' + d.color + '">●</span> Giorno ' + d.n + ' · ' + d.label] = group;
+    group.addTo(map);
+
+    fetchRoad(d).then(latlngs => {
+      if (!latlngs) return;
+      const road = L.polyline(latlngs, { color: d.color, weight: 5, opacity: 0.85 });
+      group.removeLayer(fallback);
+      group.addLayer(road);
+    });
+  });
+
+  const SOSTE = [{"tipo": "benzinai", "nome": "Freysnes fuel station", "zona": "Freysnes, vicino a Skaftafell", "lat": 63.9455, "lng": -17.502, "giorni": [4, 5, 6], "utilita": "Punto utile nella zona dell'escursione a Skaftafell", "verifica": "Verificare disponibilità delle pompe e orari a novembre", "maps": "https://www.google.com/maps/search/?api=1&query=Freysnes+gas+station+Iceland"}, {"tipo": "benzinai", "nome": "N1 Fagurhólsmýri", "zona": "Fagurhólsmýri, Route 1", "lat": 63.8955, "lng": -17.352, "giorni": [4, 5, 6], "utilita": "Alternativa lungo il tratto orientale della costa sud", "verifica": "Confermare sede e operatività", "maps": "https://www.google.com/maps/search/?api=1&query=N1+Fagurholsmyri"}, {"tipo": "benzinai", "nome": "N1 Hvolsvöllur", "zona": "Hvolsvöllur, Route 1", "lat": 63.7425, "lng": -20.238, "giorni": [2], "utilita": "Rabbocco prima di proseguire sulla costa sud", "verifica": "Verificare sede e disponibilità del self-service", "maps": "https://www.google.com/maps/search/?api=1&query=N1+Hvolsvollur+Iceland"}, {"tipo": "benzinai", "nome": "N1 Keflavík", "zona": "Keflavík", "lat": 63.9943, "lng": -22.5589, "giorni": [7, 8], "utilita": "Alternativa prima della riconsegna dell'auto", "verifica": "Scegliere la sede più comoda per il punto di riconsegna", "maps": "https://www.google.com/maps/search/?api=1&query=N1+gas+station+Keflavik+Iceland"}, {"tipo": "benzinai", "nome": "N1 Keflavík Airport", "zona": "Aeroporto di Keflavík", "lat": 63.9805, "lng": -22.6076, "giorni": [1, 8], "utilita": "Rifornimento all'arrivo o prima della riconsegna dell'auto", "verifica": "Confermare sede esatta e orari", "maps": "https://www.google.com/maps/search/?api=1&query=N1+Keflavik+Airport"}, {"tipo": "benzinai", "nome": "N1 Reykjavík", "zona": "Reykjavík", "lat": 64.1421, "lng": -21.9446, "giorni": [6], "utilita": "Rifornimento al rientro verso la capitale", "verifica": "Scegliere la sede più comoda rispetto alla guesthouse", "maps": "https://www.google.com/maps/search/?api=1&query=N1+gas+station+Reykjavik"}, {"tipo": "benzinai", "nome": "N1 Skaftárskáli", "zona": "Kirkjubæjarklaustur, Route 1", "lat": 63.7755, "lng": -18.025, "giorni": [4, 5, 6], "utilita": "Sosta strategica prima di proseguire verso est o tornare a ovest", "verifica": "La stazione comprende anche negozio/ristoro; verificare gli orari del negozio", "maps": "https://www.google.com/maps/search/?api=1&query=N1+Skaftarskali+Kirkjubaejarklaustur"}, {"tipo": "benzinai", "nome": "N1 Vík", "zona": "Vík í Mýrdal", "lat": 63.4141, "lng": -19.0084, "giorni": [2, 3, 4], "utilita": "Punto strategico prima dei tratti più isolati della costa sud", "verifica": "Verificare sede e orari aggiornati", "maps": "https://www.google.com/maps/search/?api=1&query=N1+gas+station+Vik+Iceland"}, {"tipo": "benzinai", "nome": "Olís Hella", "zona": "Hella", "lat": 63.8315, "lng": -20.401, "giorni": [2], "utilita": "Alternativa di rifornimento nella zona di Hella", "verifica": "Potrebbe richiedere una deviazione", "maps": "https://www.google.com/maps/search/?api=1&query=Olis+Hella+Iceland"}, {"tipo": "benzinai", "nome": "Olís Reykjavík", "zona": "Reykjavík", "lat": 64.1451, "lng": -21.9446, "giorni": [6], "utilita": "Alternativa di rifornimento in città", "verifica": "Scegliere la sede più comoda rispetto al percorso", "maps": "https://www.google.com/maps/search/?api=1&query=Olis+gas+station+Reykjavik"}, {"tipo": "benzinai", "nome": "Orkan Keflavík", "zona": "Keflavík, Hafnargata", "lat": 63.9973, "lng": -22.5589, "giorni": [7, 8], "utilita": "Rabbocco dopo la Blue Lagoon o prima dell'aeroporto", "verifica": "Verificare la sede più vicina al Kopa Hotel", "maps": "https://www.google.com/maps/search/?api=1&query=Orkan+Hafnargata+55+Keflavik"}, {"tipo": "benzinai", "nome": "Orkan Selfoss", "zona": "Selfoss", "lat": 63.9285, "lng": -21.001, "giorni": [2], "utilita": "Alternativa se il percorso passa da Selfoss", "verifica": "Verificare deviazione rispetto al percorso effettivo", "maps": "https://www.google.com/maps/search/?api=1&query=Orkan+Selfoss+Iceland"}, {"tipo": "benzinai", "nome": "Orkan Vík", "zona": "Vík í Mýrdal", "lat": 63.4171, "lng": -19.0084, "giorni": [2, 3, 4], "utilita": "Alternativa di rifornimento a Vík", "verifica": "Confermare operatività e posizione esatta", "maps": "https://www.google.com/maps/search/?api=1&query=Orkan+Vik+Iceland"}, {"tipo": "benzinai", "nome": "ÓB Kirkjubæjarklaustur", "zona": "Kirkjubæjarklaustur", "lat": 63.7785, "lng": -18.025, "giorni": [4, 5, 6], "utilita": "Possibile alternativa self-service", "verifica": "Confermare che la pompa sia attiva", "maps": "https://www.google.com/maps/search/?api=1&query=OB+Kirkjubaejarklaustur"}, {"tipo": "supermercati", "nome": "Bónus Selfoss", "zona": "Selfoss, Larsenstræti 5", "lat": 63.9285, "lng": -21.001, "giorni": [2], "utilita": "Spesa conveniente se passate da Selfoss", "verifica": "Selfoss è utile solo se il percorso effettivo passa dalla zona", "maps": "https://www.google.com/maps/search/?api=1&query=Bonus+Larsenstraeti+5+Selfoss"}, {"tipo": "supermercati", "nome": "Gvendarkjör", "zona": "Kirkjubæjarklaustur", "lat": 63.7755, "lng": -18.025, "giorni": [4, 5, 6], "utilita": "Piccolo negozio di alimentari in una zona con poche alternative", "verifica": "Orari ridotti; verificare soprattutto il sabato e la domenica", "maps": "https://www.google.com/maps/search/?api=1&query=Gvendarkjor+Kirkjubaejarklaustur"}, {"tipo": "supermercati", "nome": "Kjörbúðin Hella", "zona": "Hella, Suðurlandsvegur 1", "lat": 63.8315, "lng": -20.401, "giorni": [2], "utilita": "Spesa o snack prima di proseguire verso est", "verifica": "Orari domenicali e chiusura serale da controllare", "maps": "https://www.google.com/maps/search/?api=1&query=Kjorbudin+Hella+Iceland"}, {"tipo": "supermercati", "nome": "Kjörbúðin Keflavík", "zona": "Keflavík, Iðavöllum 14", "lat": 63.9943, "lng": -22.5589, "giorni": [7, 8], "utilita": "Alternativa per acquistare snack e provviste vicino all'ultima notte", "verifica": "Verificare gli orari e la distanza dal Kopa Hotel", "maps": "https://www.google.com/maps/search/?api=1&query=Kjorbudin+Idavollum+14+Keflavik"}, {"tipo": "supermercati", "nome": "Kjörbúðin Selfoss", "zona": "Selfoss, Austurvegur 42", "lat": 63.9315, "lng": -21.001, "giorni": [2], "utilita": "Alternativa per la spesa nella zona di Selfoss", "verifica": "Verificare se il percorso passa da Selfoss", "maps": "https://www.google.com/maps/search/?api=1&query=Kjorbudin+Austurvegur+42+Selfoss"}, {"tipo": "supermercati", "nome": "Krónan Hvolsvöllur", "zona": "Hvolsvöllur, Austurvegur 4", "lat": 63.7425, "lng": -20.238, "giorni": [2], "utilita": "Supermercato pratico lungo la Route 1", "verifica": "Orari indicativi: controllare prima della partenza", "maps": "https://www.google.com/maps/search/?api=1&query=Kronan+Austurvegur+4+Hvolsvollur"}, {"tipo": "supermercati", "nome": "Krónan Reykjanesbær", "zona": "Njarðvík, Fitjabraut 5", "lat": 63.9675, "lng": -22.583, "giorni": [7, 8], "utilita": "Spesa prima o dopo la Blue Lagoon, se comoda rispetto all'itinerario", "verifica": "È nella zona di Reykjanesbær, non necessariamente sulla strada più diretta per il Kopa Hotel", "maps": "https://www.google.com/maps/search/?api=1&query=Kronan+Fitjabraut+5+Njarðvik"}, {"tipo": "supermercati", "nome": "Krónan Reykjavík - Hallveigarstígur", "zona": "Reykjavík, Hallveigarstígur 1", "lat": 64.1421, "lng": -21.9446, "giorni": [6], "utilita": "Spesa in città prima della notte alla Guesthouse Aurora", "verifica": "Scegliere in base alla posizione effettiva della guesthouse", "maps": "https://www.google.com/maps/search/?api=1&query=Kronan+Hallveigarstig+1+Reykjavik"}, {"tipo": "supermercati", "nome": "Krónan Selfoss", "zona": "Selfoss, Austurvegur 3", "lat": 63.9345, "lng": -21.001, "giorni": [2], "utilita": "Supermercato per fare scorta prima della costa sud", "verifica": "Verificare l'itinerario e gli orari aggiornati", "maps": "https://www.google.com/maps/search/?api=1&query=Kronan+Austurvegur+3+Selfoss"}, {"tipo": "supermercati", "nome": "Krónan Vík", "zona": "Vík í Mýrdal, Austurvegur 20", "lat": 63.4141, "lng": -19.0084, "giorni": [2, 3, 4], "utilita": "Ultima grande spesa comoda prima del lungo tratto verso est", "verifica": "Particolarmente consigliato per snack, pranzo e provviste", "maps": "https://www.google.com/maps/search/?api=1&query=Kronan+Austurvegur+20+Vik+Iceland"}, {"tipo": "supermercati", "nome": "N1 Skaftárskáli - negozio", "zona": "Kirkjubæjarklaustur, Route 1", "lat": 63.7785, "lng": -18.025, "giorni": [4, 5, 6], "utilita": "Snack, bevande e beni di prima necessità; non sostituisce un grande supermercato", "verifica": "Controllare gli orari del negozio", "maps": "https://www.google.com/maps/search/?api=1&query=N1+Skaftarskali+Kirkjubaejarklaustur"}, {"tipo": "supermercati", "nome": "Samkaup Úrval Selfoss", "zona": "Selfoss, Tryggvagata 40", "lat": 63.9375, "lng": -21.001, "giorni": [2], "utilita": "Alternativa per generi alimentari", "verifica": "Verificare gli orari aggiornati", "maps": "https://www.google.com/maps/search/?api=1&query=Samkaup+Urval+Tryggvagata+40+Selfoss"}];
+  const ICONE = { benzinai: '⛽', supermercati: '🛒' };
+  const NOMI = { benzinai: '⛽ Benzinai', supermercati: '🛒 Supermercati' };
+  ['benzinai', 'supermercati'].forEach(tipo => {
+    const grp = L.layerGroup();
+    SOSTE.filter(s => s.tipo === tipo).forEach(s => {
+      const icon = L.divIcon({ html: '<div class="ico">' + ICONE[tipo] + '</div>', className: '', iconSize: [28, 28], iconAnchor: [14, 14] });
+      const m = L.marker([s.lat, s.lng], { icon: icon });
+      m.bindTooltip(s.nome);
+      const links = s.giorni.map(n => '<a href="#" data-goto="g' + n + '">G' + n + '</a>').join(' · ');
+      m.bindPopup('<strong>' + s.nome + '</strong><br>' + s.zona + '<br>' + s.utilita +
+        '<br><em>' + s.verifica + '</em><br>Giorni: ' + links +
+        '<br><a href="' + s.maps + '" target="_blank" rel="noopener">📍 Apri in Maps</a>', { maxWidth: 280 });
+      grp.addLayer(m);
+    });
+    grp.addTo(map);
+    overlays[NOMI[tipo]] = grp;
+  });
+
+  L.control.layers(null, overlays, { collapsed: false, position: 'topright' }).addTo(map);
+  if (bounds.length) map.fitBounds(bounds, { padding: [30, 30] });
+
+  map.on('popupopen', e => {
+    e.popup.getElement().querySelectorAll('[data-goto]').forEach(a => {
+      a.addEventListener('click', ev => { ev.preventDefault(); goto(a.dataset.goto); });
+    });
+  });
+
+  document.querySelectorAll('.dg [data-goto]').forEach(b => {
+    b.addEventListener('click', () => goto(b.dataset.goto));
+  });
+
+  document.querySelector('.tab[data-tab="mappa"]').addEventListener('click', () => {
+    setTimeout(() => map.invalidateSize(), 60);
+  });
+})();
+</script>
+</body>
+</html>
